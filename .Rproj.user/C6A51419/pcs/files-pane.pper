@@ -1,0 +1,9 @@
+{
+    "path" : "~/miRBaseNames.db",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
