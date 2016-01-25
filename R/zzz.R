@@ -1,12 +1,12 @@
 datacache <- new.env(hash=TRUE, parent=emptyenv())
 
 
-mirbasenames_dbconn <- function() AnnotationDbi:::dbconn(datacache)
-mirbasenames_dbfile <- function() AnnotationDbi:::dbfile(datacache)
+mirbasenames_dbconn <- function() dbconn(datacache)
+mirbasenames_dbfile <- function() dbfile(datacache)
 
 mirbasenamesORGANISM <- "Multiple"
 
-.load <- function(libname, pkgname) {
+.onLoad <- function(libname, pkgname) {
 
     require("methods", quietly=TRUE)
     # Connect to the SQLite database
@@ -18,11 +18,11 @@ mirbasenamesORGANISM <- "Multiple"
 #                           package=pkgname, lib.loc=libname)
     assign("dbfile", dbfile, envir=datacache);
     # Database connection
-    dbconn <- dbFileConnect(dbfile);
+    dbconn <- AnnotationDbi::dbFileConnect(dbfile);
     assign("dbconn", dbconn, envir=datacache);
 
     # Create the OrgDb object
-    txdb <- loadDb(dbfile,
+    txdb <- AnnotationDbi::loadDb(dbfile,
                    packageName = pkgname);
     dbNewname <- AnnotationDbi:::dbObjectName(pkgname,"MiRBaseNamesDb")
     ns <- asNamespace(pkgname)
