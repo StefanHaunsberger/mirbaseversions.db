@@ -1,10 +1,10 @@
 datacache = new.env(hash=TRUE, parent=emptyenv())
 
 
-mirbasenames_dbconn = function() dbconn(datacache)
-mirbasenames_dbfile = function() dbfile(datacache)
+mirbaseversions_dbconn = function() dbconn(datacache)
+mirbaseversions_dbfile = function() dbfile(datacache)
 
-mirbasenamesORGANISM = "Multiple"
+mirbaseversionsORGANISM = "Multiple"
 
 .onLoad = function(libname, pkgname) {
 
@@ -22,20 +22,17 @@ mirbasenamesORGANISM = "Multiple"
     # Create the OrgDb object
     txdb = AnnotationDbi::loadDb(dbfile,
                    packageName = pkgname);
-    dbNewname = AnnotationDbi:::dbObjectName(pkgname,"MiRBaseNamesDb");
+    dbNewname = AnnotationDbi:::dbObjectName(pkgname,"MiRBaseVersionsDb");
     ns = asNamespace(pkgname);
     assign(dbNewname, txdb, envir = ns);
     namespaceExport(ns, dbNewname);
 
-    ## Create the AnnObj instances
-#     ann_objs = createAnnObjs.SchemaChoice("INPARANOID_DB", "hom.Hs.inp", "Human", dbconn, datacache)
-#     mergeToNamespaceAndExport(ann_objs, pkgname)
     packageStartupMessage(AnnotationDbi:::annoStartupMessages("That's it!!!"))
 
 }
 
 .onUnload = function(libpath)
 {
-    dbFileDisconnect(mirbasenames_dbconn())
+    dbFileDisconnect(mirbaseversions_dbconn())
 }
 

@@ -1,18 +1,34 @@
+#' @docType package
+#' @name miRBaseVersions.db
+#' @title miRNAtap: microRNA Targets - Aggregated Predictions.
+#' @details It is a package with tools to facilitate implementation of workflows
+#' requiring miRNA prediction through access to multiple prediction results
+#' (DIANA, Targetscan, PicTar and Miranda) and their aggregation.
+#' Three aggregation methods are available: minimum, maximum and geometric mean,
+#' additional parameters provide further tuning of the results.
+#' Predictions are available for Homo sapiens, Mus musculus
+#' and Rattus norvegicus (the last one through homology translation).
+#' @import AnnotationDbi RSQLite DBI stringr sqldf plyr methods
+#' @author Maciej Pajak \email{m.pajak@@sms.ed.ac.uk}, Ian Simpson
+#' @examples
+#' #direct targets in mouse aggregated from all sources:
+#' targets_mouse <- getPredictedTargets('let-7a',species='mmu', method='geom')
+#' #homology-translated targets in rat aggregated from all sources
+#' targets_rat <- getPredictedTargets('let-7a',species='mmu', method='geom')
+NULL
+
 
 library(AnnotationDbi)
 
-# mirbasenames_dbconn = function() AnnotationDbi::dbconn(datacache)
-# mirbasenames_dbfile = function() AnnotationDbi::dbfile(datacache)
-
-.MiRBaseNamesDb = setRefClass(
-    Class = "MiRBaseNamesDb",
+.MiRBaseVersionsDb = setRefClass(
+    Class = "MiRBaseVersionsDb",
 
     #     slots = representation(
     #         name = "character"
     #     ),
     #
     #     prototype = list(
-    #         name = "testMiRBaseNamesDb"
+    #         name = "testMiRBaseVersionsDb"
     #     ),
     contains = "AnnotationDb"
 
@@ -45,7 +61,8 @@ library(AnnotationDbi)
 #     UC = .cols(x);
     con = AnnotationDbi::dbconn(x);
     ## Receive table names
-    tables = grep("vw-mimat-[0-9]+\\.[0-9]$", dbListTables(con), value = TRUE);
+    tables = grep("vw-mimat-[0-9]+\\.[0-9]$|^\\bmimat\\b",
+                    dbListTables(con), value = TRUE);
     names(tables) = toupper(tables);
     return(tables);
 }
@@ -79,7 +96,7 @@ library(AnnotationDbi)
 # @exportMethod columns
 setMethod(
     f = "columns",
-    signature = "MiRBaseNamesDb",
+    signature = "MiRBaseVersionsDb",
     # definition = .cols(this)
     definition = function(x) {
         return(.cols(x));
@@ -90,11 +107,11 @@ setMethod(
 # @exportMethod columns
 setMethod(
     f = "keytypes",
-    signature = "MiRBaseNamesDb",
+    signature = "MiRBaseVersionsDb",
     # definition = .cols(this)
     definition = function(x) {
         # return(.cols(x));
-        return(.getTableNames(x))
+        return(names(.getTableNames(x)));
     }
 )
 
@@ -102,7 +119,7 @@ setMethod(
 # @exportMethod keys
 setMethod(
     f = "keys",
-    signature = "MiRBaseNamesDb",
+    signature = "MiRBaseVersionsDb",
     definition = function(x, keytype) {
         return(.keys(x, keytype));
     }
