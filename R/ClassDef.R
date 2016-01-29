@@ -1,12 +1,40 @@
 
 library(AnnotationDbi)
+#' @title Database class
+#' @aliases MiRBaseVersionsDb columns keys keytypes select
+#' @description object of \code{MiRBaseVersionsDb} class holds the sqlite
+#' database connection, and extends \code{AnnotationDb} class from AnnotationDbi
+#' package. \code{columns}, \code{keys}, \code{keytypes} and \code{select}
+#' methods allow access to database tables and retrieval of miRNA target
+#' information.
+#'
+#' \code{select} is for querying the database to retrieve information about
+#' mature miRNA names from selected versions.
+#' @usage columns(x)
+#' keytypes(x)
+#' keys(x, keytype)
+#' select(x, keys, columns, keytype)
+#' @param x the \code{MiRBaseVersionsDb} object
+#' @param keytype represents the table from which data shall be received. All
+#' possible keytypes can be viewed by using the \code{keytypes} method.
+#' @param keys the accession name of mature miRNAs. All possible keys (miRNAs)
+#' are returned by using the \code{keys} method.
+#' @param columns that can be returned for each miRNA. All possible columns can
+#' shown by using the \code{columns} method.
+#' @return string vectors, for \code{select} a data.frame with selected columns.
+#' @author Stefan Haunsberger \email{stefanhaunsberger@rcsi.ie}
+#' @exportClass MiRBaseVersionsDb
+#' @examples
+#' #first load the annotations
+#' require(miRBaseVersions.db)
+#' #see all available tables
+#' keytypes(miRBaseVersions.db)
 
 .MiRBaseVersionsDb = setRefClass(
     Class = "MiRBaseVersionsDb",
     contains = "AnnotationDb"
 
 )
-
 
 #' @title Lower case columns function implementation
 #' @details This function reads column names from the view of the
@@ -83,30 +111,36 @@ library(AnnotationDbi)
     return(res);
 }
 
-#' @rdname miRBaseVersions.db
+.select = function(x, keys, columns, keytype) {
+
+
+    sql = sprintf("SELECT %s FROM %s WHERE accession IN (%s);")
+
+}
+
+
+#' @rdname MiRBaseVersionsDb-class
 #' @exportMethod columns
 setMethod(
     f = "columns",
     signature = "MiRBaseVersionsDb",
-    # definition = .cols(this)
     definition = function(x) {
         return(.cols(x));
     }
 )
 
-#' @rdname miRBaseVersions.db
+#' @rdname MiRBaseVersionsDb-class
 #' @exportMethod keytypes
 setMethod(
     f = "keytypes",
     signature = "MiRBaseVersionsDb",
-    # definition = .cols(this)
     definition = function(x) {
         # return(.cols(x));
         return(names(.getTableNames(x)));
     }
 )
 
-#' @rdname miRBaseVersions.db
+#' @rdname MiRBaseVersionsDb-class
 #' @exportMethod keys
 setMethod(
     f = "keys",
@@ -115,3 +149,12 @@ setMethod(
         return(.keys(x, keytype));
     }
 )
+
+#' @rdname MiRBaseVersionsDb-class
+#' @exportMethod select
+setMethod(
+    f = "select",
+    signature = "MiRBaseVersionsDb",
+    definition = function(x, keys, columns = "*", keytype = "") {
+        .select(keys = keys, columns = columns, keytype = keytype);
+    })
