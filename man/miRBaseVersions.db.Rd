@@ -8,7 +8,7 @@
 \alias{miRBaseVersions.db}
 \alias{miRBaseVersions.db-package}
 \title{miRBaseVersions.db: miRNA name collection of 21 different miRBase
-releases.}
+release versions.}
 \usage{
 \S4method{columns}{MiRBaseVersionsDb}(x)
 
@@ -18,7 +18,7 @@ releases.}
 }
 \details{
 This annotation package holds mature miRNA names from 21 different
-miRBase versions. It contains one main table containing all miRNAs and
+miRBase versions. It contains one main table holding all miRNAs and
 one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
 from version 21.0.
 }

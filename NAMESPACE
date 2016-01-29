@@ -2,7 +2,7 @@
 
 exportMethods(columns)
 exportMethods(keys)
-exportMethods(keytupes)
+exportMethods(keytypes)
 import(AnnotationDbi)
 import(DBI)
 import(RSQLite)

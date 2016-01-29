@@ -1,9 +1,9 @@
 #' @docType package
 #' @name miRBaseVersions.db
 #' @title miRBaseVersions.db: miRNA name collection of 21 different miRBase
-#' releases.
+#' release versions.
 #' @details This annotation package holds mature miRNA names from 21 different
-#' miRBase versions. It contains one main table containing all miRNAs and
+#' miRBase versions. It contains one main table holding all miRNAs and
 #' one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
 #' from version 21.0.
 #' @import AnnotationDbi RSQLite DBI methods
@@ -15,15 +15,14 @@
 # targets_rat <- getPredictedTargets('let-7a',species='mmu', method='geom')
 NULL
 
-
 datacache = new.env(hash=TRUE, parent=emptyenv())
-
 
 mirbaseversions_dbconn = function() dbconn(datacache)
 mirbaseversions_dbfile = function() dbfile(datacache)
 
 mirbaseversionsORGANISM = "Multiple"
 
+# The .onLoad will be called when the package is loaded.
 .onLoad = function(libname, pkgname) {
 
     require("methods", quietly=TRUE)
@@ -31,15 +30,16 @@ mirbaseversionsORGANISM = "Multiple"
     sPkgname = sub(".db$","",pkgname);
     ## Database file
     dbfile = system.file("extdata", paste0(sPkgname, ".sqlite"),
-                            package = pkgname, lib.loc=libname)
+                         package = pkgname, lib.loc=libname)
     assign("dbfile", dbfile, envir = datacache);
-    # Database connection
+    ## Establish database connection
     dbconn = AnnotationDbi::dbFileConnect(dbfile);
     assign("dbconn", dbconn, envir=datacache);
 
     # Create the OrgDb object
+    ## Use information stored in the metadata table
     txdb = AnnotationDbi::loadDb(dbfile,
-                   packageName = pkgname);
+                                 packageName = pkgname);
     dbNewname = AnnotationDbi:::dbObjectName(pkgname,"MiRBaseVersionsDb");
     ns = asNamespace(pkgname);
     assign(dbNewname, txdb, envir = ns);
@@ -49,6 +49,7 @@ mirbaseversionsORGANISM = "Multiple"
 
 }
 
+# Disconnect from dbfile on onload package
 .onUnload = function(libpath)
 {
     dbFileDisconnect(mirbaseversions_dbconn())
