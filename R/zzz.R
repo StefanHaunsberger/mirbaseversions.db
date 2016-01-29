@@ -1,3 +1,21 @@
+#' @docType package
+#' @name miRBaseVersions.db
+#' @title miRBaseVersions.db: miRNA name collection of 21 different miRBase
+#' releases.
+#' @details This annotation package holds mature miRNA names from 21 different
+#' miRBase versions. It contains one main table containing all miRNAs and
+#' one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
+#' from version 21.0.
+#' @import AnnotationDbi RSQLite DBI methods
+#' @author Stefan Haunsberger \email{stefanhaunsberger@rcsi.ie}
+# @examples
+# #direct targets in mouse aggregated from all sources:
+# targets_mouse <- getPredictedTargets('let-7a',species='mmu', method='geom')
+# #homology-translated targets in rat aggregated from all sources
+# targets_rat <- getPredictedTargets('let-7a',species='mmu', method='geom')
+NULL
+
+
 datacache = new.env(hash=TRUE, parent=emptyenv())
 
 

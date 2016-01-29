@@ -1,16 +1,3 @@
-#' @docType package
-#' @name miRBaseVersions.db
-#' @title miRNAtap: microRNA Targets - Aggregated Predictions.
-#' @details It is a
-#' @import AnnotationDbi RSQLite DBI stringr sqldf plyr methods
-#' @author Maciej Pajak \email{m.pajak@@sms.ed.ac.uk}, Ian Simpson
-#' @examples
-#' #direct targets in mouse aggregated from all sources:
-#' targets_mouse <- getPredictedTargets('let-7a',species='mmu', method='geom')
-#' #homology-translated targets in rat aggregated from all sources
-#' targets_rat <- getPredictedTargets('let-7a',species='mmu', method='geom')
-NULL
-
 
 library(AnnotationDbi)
 
@@ -38,7 +25,7 @@ library(AnnotationDbi)
     # cols = grep("vw-mimat-[0-9]+\\.[0-9]$|organism",
     #               dbListTables(con), value = TRUE);
     # cols = grep("vw-mimat-[0-9]+\\.[0-9]$", dbListTables(con), value = TRUE);
-    cols = (dbGetQuery(con, "PRAGMA table_info(\"vw-mimat-21.0\")"))$name;
+    cols = (dbGetQuery(con, "PRAGMA table_info('vw-mimat-21.0')"))$name;
     return(cols);
 }
 
@@ -86,8 +73,8 @@ library(AnnotationDbi)
     return(res);
 }
 
-# @rdname
-# @exportMethod columns
+#' @rdname miRBaseVersions.db
+#' @exportMethod columns
 setMethod(
     f = "columns",
     signature = "MiRBaseVersionsDb",
@@ -97,8 +84,8 @@ setMethod(
     }
 )
 
-# @rdname
-# @exportMethod columns
+#' @rdname miRBaseVersions.db
+#' @exportMethod keytupes
 setMethod(
     f = "keytypes",
     signature = "MiRBaseVersionsDb",
@@ -109,8 +96,8 @@ setMethod(
     }
 )
 
-# @rdname
-# @exportMethod keys
+#' @rdname miRBaseVersions.db
+#' @exportMethod keys
 setMethod(
     f = "keys",
     signature = "MiRBaseVersionsDb",
