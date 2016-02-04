@@ -1,3 +1,10 @@
+datacache = new.env(hash=TRUE, parent=emptyenv())
+
+mirbaseversions_dbconn = function() dbconn(datacache)
+# mirbaseversions_dbfile = function() dbfile(datacache)
+
+mirbaseversionsORGANISM = "Multiple"
+
 #' @docType package
 #' @name miRBaseVersions.db
 #' @title miRBaseVersions.db: miRNA name collection of 21 different miRBase
@@ -15,13 +22,6 @@
 # targets_rat <- getPredictedTargets('let-7a',species='mmu', method='geom')
 NULL
 
-datacache = new.env(hash=TRUE, parent=emptyenv())
-
-mirbaseversions_dbconn = function() dbconn(datacache)
-mirbaseversions_dbfile = function() dbfile(datacache)
-
-mirbaseversionsORGANISM = "Multiple"
-
 # The .onLoad will be called when the package is loaded.
 .onLoad = function(libname, pkgname) {
 
@@ -35,9 +35,11 @@ mirbaseversionsORGANISM = "Multiple"
     dbconn = AnnotationDbi::dbFileConnect(dbfile);
     assign("dbconn", dbconn, envir=datacache);
 
+    ########################################################################
     # Define class
 
-    # library(AnnotationDbi)
+
+    library(AnnotationDbi)
     #' @title Database class
     #' @aliases MiRBaseVersionsDb columns keys keytypes select
     #' @description object of \code{MiRBaseVersionsDb} class holds the sqlite
@@ -73,7 +75,6 @@ mirbaseversionsORGANISM = "Multiple"
         contains = "AnnotationDb"
 
     )
-
 
     #' @title Lower case columns function implementation
     #' @details This function reads column names from the view of the
@@ -150,6 +151,14 @@ mirbaseversionsORGANISM = "Multiple"
         return(res);
     }
 
+    .select = function(x, keys, columns, keytype) {
+
+
+        sql = sprintf("SELECT %s FROM %s WHERE accession IN (%s);")
+
+    }
+
+
     #' @rdname MiRBaseVersionsDb-class
     #' @exportMethod columns
     setMethod(
@@ -181,6 +190,35 @@ mirbaseversionsORGANISM = "Multiple"
         }
     )
 
+    #' @rdname MiRBaseVersionsDb-class
+    #' @exportMethod select
+    setMethod(
+        f = "select",
+        signature = "MiRBaseVersionsDb",
+        definition = function(x, keys, columns = "*", keytype = "") {
+            .select(keys = keys, columns = columns, keytype = keytype);
+        }
+    )
+
+#     #' @export
+#     setGeneric(
+#         name = "mirbaseversions_dbconn",
+#         signature(),
+#         def = function(x) {
+#             standardGeneric("mirbaseversions_dbconn");
+#         }
+#     )
+#     #' @export
+#     setMethod(
+#         f = "mirbaseversions_dbconn",
+#         signature(),
+#         definition = function(x) {
+#             return(5);
+#         }
+#     )
+
+    ########################################################################
+
     # Create the OrgDb object
     ## Use information stored in the metadata table
     txdb = AnnotationDbi::loadDb(dbfile,
@@ -190,6 +228,9 @@ mirbaseversionsORGANISM = "Multiple"
     assign(dbNewname, txdb, envir = ns);
     namespaceExport(ns, dbNewname);
 
+    ## Create the AnnObj instances
+    # ann_objs <- createAnnObjs.SchemaChoice("MIRBASEVERSIONS_DB", "mirbaseversions", "multiple", dbconn, datacache)
+    # mergeToNamespaceAndExport(ann_objs, pkgname)
     packageStartupMessage(AnnotationDbi:::annoStartupMessages("That's it!!!"))
 
 }
