@@ -9,15 +9,39 @@ mirbaseversionsORGANISM = "Multiple"
 #' @name miRBaseVersions.db
 #' @title miRBaseVersions.db: miRNA name collection of 21 different miRBase
 #' release versions.
-#' @details This annotation package holds mature miRNA names from 21 different
-#' miRBase versions. It contains one main table holding all miRNAs and
-#' one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
+#' @details This annotation package comprises mature miRNA names from
+#' 21 different miRBase versions. It contains one main table holding all miRNAs
+#' and one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
 #' from version 21.0.
-#' @import AnnotationDbi methods DBI RSQLite
+#' @import AnnotationDbi methods DBI RSQLite gtools
 #' @author Stefan Haunsberger \email{stefanhaunsberger@rcsi.ie}
 #'
-# @importClassesFrom miRBaseVersions.db MiRBaseVersionsDb
+#' @description object of \code{MiRBaseVersionsDb} class holds the sqlite
+#' database connection, and extends \code{AnnotationDb} class from
+#' AnnotationDbi package. \code{columns}, \code{keys}, \code{keytypes} and
+#' \code{select} methods allow access to database tables and retrieval of
+#' miRNA target information.
 #'
+#' \code{select} is for querying the database to retrieve information about
+#' mature miRNA names from selected versions.
+#' @usage columns(x)
+#' keytypes(x)
+#' keys(x, keytype)
+#' select(x, keys, columns, keytype)
+#' @param x the \code{miRBaseVersions.db}
+#' @param keytype represents the table from which data shall be received.
+#' All possible keytypes can be viewed by using the \code{keytypes} method.
+#' @param keys the accession name of mature miRNAs. All possible keys
+#' (miRNAs) are returned by using the \code{keys} method.
+#' @param columns that can be returned for each miRNA. All possible columns
+#' can be shown by using the \code{columns} method.
+#' @return string vectors, for \code{select} a data.frame with selected
+#' columns.
+#' @examples
+#' #first load the annotations
+#' require(miRBaseVersions.db)
+#' #see all available tables
+#' keytypes(miRBaseVersions.db)
 # @examples
 # #direct targets in mouse aggregated from all sources:
 # targets_mouse <- getPredictedTargets('let-7a',species='mmu', method='geom')
@@ -51,46 +75,46 @@ NULL
 #         sys.source(file = "R/ClassDef.R", envir = environment())
 #     }
 
-    #' @title Database class
-    #' @aliases MiRBaseVersionsDb columns keys keytypes select
-    #' @description object of \code{MiRBaseVersionsDb} class holds the sqlite
-    #' database connection, and extends \code{AnnotationDb} class from
-    #' AnnotationDbi package. \code{columns}, \code{keys}, \code{keytypes} and
-    #' \code{select} methods allow access to database tables and retrieval of
-    #' miRNA target information.
-    #'
-    #' \code{select} is for querying the database to retrieve information about
-    #' mature miRNA names from selected versions.
-    #' @usage columns(x)
-    #' keytypes(x)
-    #' keys(x, keytype)
-    #' select(x, keys, columns, keytype)
-    #' @param x the \code{miRBaseVersions.db}
-    #' @param keytype represents the table from which data shall be received.
-    #' All possible keytypes can be viewed by using the \code{keytypes} method.
-    #' @param keys the accession name of mature miRNAs. All possible keys
-    #' (miRNAs) are returned by using the \code{keys} method.
-    #' @param columns that can be returned for each miRNA. All possible columns
-    #' can be shown by using the \code{columns} method.
-    #' @return string vectors, for \code{select} a data.frame with selected
-    #' columns.
-    #' @author Stefan Haunsberger \email{stefanhaunsberger@rcsi.ie}
-    #' @examples
-    #' #first load the annotations
-    #' require(miRBaseVersions.db)
-    #' #see all available tables
-    #' keytypes(miRBaseVersions.db)
-    #' @export MiRBaseVersionsDb
+    # @title Database class
+    # @aliases MiRBaseVersionsDb columns keys keytypes select
+    # @description object of \code{MiRBaseVersionsDb} class holds the sqlite
+    # database connection, and extends \code{AnnotationDb} class from
+    # AnnotationDbi package. \code{columns}, \code{keys}, \code{keytypes} and
+    # \code{select} methods allow access to database tables and retrieval of
+    # miRNA target information.
+    #
+    # \code{select} is for querying the database to retrieve information about
+    # mature miRNA names from selected versions.
+    # @usage columns(x)
+    # keytypes(x)
+    # keys(x, keytype)
+    # select(x, keys, columns, keytype)
+    # @param x the \code{miRBaseVersions.db}
+    # @param keytype represents the table from which data shall be received.
+    # All possible keytypes can be viewed by using the \code{keytypes} method.
+    # @param keys the accession name of mature miRNAs. All possible keys
+    # (miRNAs) are returned by using the \code{keys} method.
+    # @param columns that can be returned for each miRNA. All possible columns
+    # can be shown by using the \code{columns} method.
+    # @return string vectors, for \code{select} a data.frame with selected
+    # columns.
+    # @author Stefan Haunsberger \email{stefanhaunsberger@rcsi.ie}
+    # @examples
+    # #first load the annotations
+    # require(miRBaseVersions.db)
+    # #see all available tables
+    # keytypes(miRBaseVersions.db)
+    # @export MiRBaseVersionsDb
     .MiRBaseVersionsDb = setRefClass(
         Class = "MiRBaseVersionsDb",
         contains = "AnnotationDb"
     )
 
-    #' @title Lower case columns function implementation
-    #' @details This function reads column names from the view of the
-    #' current version in lower case. All visible keytypes have the same columns.
-    #' @param MiRBaseVersionsDb object reference
-    #' @return Character vector with lower case column names.
+    # @title Lower case columns function implementation
+    # @details This function reads column names from the view of the
+    # current version in lower case. All visible keytypes have the same columns.
+    # @param MiRBaseVersionsDb object reference
+    # @return Character vector with lower case column names.
     .getLCColnames = function(x) {
         # Retrieve tables names from database
         con = AnnotationDbi::dbconn(x);
@@ -104,11 +128,11 @@ NULL
         return(cols);
     }
 
-    #' @title Internal \code{columns} function implementation
-    #' @details This function converts lower case column names (received from
-    #' \code{\link{.getLCColNames}}) into upper case.
-    #' @param MiRBaseVersionsDb object reference
-    #' @return Character vector containing upper case column names
+    # @title Internal \code{columns} function implementation
+    # @details This function converts lower case column names (received from
+    # \code{\link{.getLCColNames}}) into upper case.
+    # @param MiRBaseVersionsDb object reference
+    # @return Character vector containing upper case column names
     .cols = function(x)
     {
         cols = .getLCColnames(x);
@@ -116,13 +140,13 @@ NULL
         return(cols);
     }
 
-    #' @title Internal \code{keytypes} implementation
-    #' @details The \code{.getTableNames} function reads table names from the
-    #' database. Two types of tables will be returned, the general mimat table
-    #' and views respectively for each miRBase version.
-    #' @param MiRBaseVersionsDb object reference
-    #' @return Character vector where the values are lower name and the 'name'
-    #' attribute are upper name table names.
+    # @title Internal \code{keytypes} implementation
+    # @details The \code{.getTableNames} function reads table names from the
+    # database. Two types of tables will be returned, the general mimat table
+    # and views respectively for each miRBase version.
+    # @param MiRBaseVersionsDb object reference
+    # @return Character vector where the values are lower name and the 'name'
+    # attribute are upper name table names.
     .getTableNames = function(x)
     {
         con = AnnotationDbi::dbconn(x);
@@ -133,17 +157,18 @@ NULL
         return(tables);
     }
 
-    #' @title Internal \code{keys} function implementation
-    #' @details The \code{.keys} function implementation reads the accessions
-    #' of the desired keytype.
-    #' @param MiRBaseVersionsDb object reference
-    #' @return Character vector with accession names from specified
-    #' \code{keytype}
+    # @title Internal \code{keys} function implementation
+    # @details The \code{.keys} function implementation reads the accessions
+    # of the desired keytype.
+    # @param MiRBaseVersionsDb object reference
+    # @return Character vector with accession names from specified
+    # \code{keytype}
     .keys = function(x, keytype)
     {
         ## translate keytype back to table name
         tabNames = .getTableNames(x);
-        lckeytype = names(tabNames[tabNames %in% keytype]);
+        # lckeytype = names(tabNames[tabNames %in% keytype]);
+        lckeytype = tabNames[names(tabNames) %in% keytype];
         if (length(lckeytype) == 0) {
             # message(sprintf("keytype '%s' not present.", keytype));
             stop(paste("keytype", keytype, "does not exist.",
@@ -171,21 +196,29 @@ NULL
         tabNames = .getTableNames(x);
         keytypeLC = tabNames[names(tabNames) %in% keytype];
         ## Get columns
+        colsSQL = character();
         colsLC = .getLCColnames(x);
-        colsUC = .cols(x);
-        cols = colsLC[colsUC %in% columns];
+        if (columns != "*") {
+            colsUC = .cols(x);
+            cols = colsLC[colsUC %in% columns];
+            colsSQL = paste(cols, collapse = ", ");
+        } else {
+            colsSQL = "*";
+        }
         ## get the connection
         con = AnnotationDbi::dbconn(x);
         sql = sprintf(paste("SELECT %s FROM %s",
                             "WHERE UPPER(accession) IN ('%s')"),
-                paste(cols, collapse = ", "), keytypeLC,
+                colsSQL, keytypeLC,
                 paste(toupper(keys), collapse = "', '"));
         ## Execute SQL statement
         res = DBI::dbGetQuery(con, sql);
+        colnames(res) = toupper(colnames(res));
         return(res)
     }
 
-    #' @rdname MiRBaseVersionsDb-class
+    # @rdname MiRBaseVersionsDb-class
+    #' @rdname miRBaseVersions.db
     #' @exportMethod columns
     setMethod(
         f = "columns",
@@ -195,17 +228,22 @@ NULL
         }
     )
 
-    #' @rdname MiRBaseVersionsDb-class
+    # @rdname MiRBaseVersionsDb-class
+    #' @rdname miRBaseVersions.db
     #' @exportMethod keytypes
     setMethod(
         f = "keytypes",
         signature = "MiRBaseVersionsDb",
         definition = function(x) {
-            return(names(.getTableNames(x)));
+            tables = names(.getTableNames(x))
+            ## Order values
+            tables = tables[gtools::mixedorder(tables, decreasing = TRUE)];
+            return(tables);
         }
     )
 
-    #' @rdname MiRBaseVersionsDb-class
+    # @rdname MiRBaseVersionsDb-class
+    #' @rdname miRBaseVersions.db
     #' @exportMethod keys
     setMethod(
         f = "keys",
@@ -215,7 +253,8 @@ NULL
         }
     )
 
-    #' @rdname MiRBaseVersionsDb-class
+    # @rdname MiRBaseVersionsDb-class
+    #' @rdname miRBaseVersions.db
     #' @exportMethod select
     setMethod(
         f = "select",
@@ -224,6 +263,8 @@ NULL
             .select(x, keys = keys, columns = columns, keytype = keytype);
         }
     )
+
+
 
     ########################################################################
 

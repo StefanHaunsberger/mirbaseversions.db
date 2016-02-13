@@ -2,15 +2,56 @@
 % Please edit documentation in R/zzz.R
 \docType{package}
 \name{miRBaseVersions.db}
+\alias{.onLoad}
 \alias{miRBaseVersions.db}
 \alias{miRBaseVersions.db-package}
 \title{miRBaseVersions.db: miRNA name collection of 21 different miRBase
 release versions.}
+\usage{
+columns(x)
+keytypes(x)
+keys(x, keytype)
+select(x, keys, columns, keytype)
+
+.onLoad(libname, pkgname)
+}
+\arguments{
+\item{x}{the \code{miRBaseVersions.db}}
+
+\item{keytype}{represents the table from which data shall be received.
+All possible keytypes can be viewed by using the \code{keytypes} method.}
+
+\item{keys}{the accession name of mature miRNAs. All possible keys
+(miRNAs) are returned by using the \code{keys} method.}
+
+\item{columns}{that can be returned for each miRNA. All possible columns
+can be shown by using the \code{columns} method.}
+}
+\value{
+string vectors, for \code{select} a data.frame with selected
+columns.
+}
+\description{
+object of \code{MiRBaseVersionsDb} class holds the sqlite
+database connection, and extends \code{AnnotationDb} class from
+AnnotationDbi package. \code{columns}, \code{keys}, \code{keytypes} and
+\code{select} methods allow access to database tables and retrieval of
+miRNA target information.
+
+\code{select} is for querying the database to retrieve information about
+mature miRNA names from selected versions.
+}
 \details{
-This annotation package holds mature miRNA names from 21 different
-miRBase versions. It contains one main table holding all miRNAs and
-one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
+This annotation package comprises mature miRNA names from
+21 different miRBase versions. It contains one main table holding all miRNAs
+and one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
 from version 21.0.
+}
+\examples{
+#first load the annotations
+require(miRBaseVersions.db)
+#see all available tables
+keytypes(miRBaseVersions.db)
 }
 \author{
 Stefan Haunsberger \email{stefanhaunsberger@rcsi.ie}
