@@ -195,6 +195,9 @@ NULL
         ## translate keytype back to table name
         tabNames = .getTableNames(x);
         keytypeLC = tabNames[names(tabNames) %in% keytype];
+        if (length(keytypeLC) == 0) {
+            stop("Keytype not valid. Please check out 'keytypes'.");
+        }
         ## Get columns
         colsSQL = character();
         colsLC = .getLCColnames(x);
