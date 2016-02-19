@@ -9,6 +9,7 @@ mirbaseversionsORGANISM = "Multiple"
 #' @name miRBaseVersions.db
 #' @title miRBaseVersions.db: miRNA name collection of 21 different miRBase
 #' release versions.
+#' @aliases columns keys keytypes select
 #' @details This annotation package comprises mature miRNA names from
 #' 21 different miRBase versions. It contains one main table holding all miRNAs
 #' and one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
@@ -52,7 +53,7 @@ NULL
 # The .onLoad will be called when the package is loaded.
 .onLoad = function(libname, pkgname) {
 
-    library(methods)
+    # library(methods)
     # Connect to the SQLite database
     sPkgname = sub(".db$","",pkgname);
     ## Database file

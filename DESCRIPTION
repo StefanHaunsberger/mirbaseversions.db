@@ -1,7 +1,7 @@
 Package: miRBaseVersions.db
 Type: Package
 Title: Collection of mature miRNA names of 21 different miRBase release versions
-Version: 0.99.0
+Version: 0.99.1
 Date: 2016-01-14
 Authors@R: person("Stefan", "Haunsberger", email = "stefan.haunsberger@gmail.com", role = c("aut", "cre"))
 Description: Annotation package containing all available miRNA names from all versions (data from http://www.mirbase.org/).

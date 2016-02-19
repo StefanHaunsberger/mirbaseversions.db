@@ -3,8 +3,12 @@
 \docType{package}
 \name{miRBaseVersions.db}
 \alias{.onLoad}
+\alias{columns}
+\alias{keys}
+\alias{keytypes}
 \alias{miRBaseVersions.db}
 \alias{miRBaseVersions.db-package}
+\alias{select}
 \title{miRBaseVersions.db: miRNA name collection of 21 different miRBase
 release versions.}
 \usage{
