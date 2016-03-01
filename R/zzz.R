@@ -36,18 +36,17 @@ mirbaseversionsORGANISM = "Multiple"
 #' (miRNAs) are returned by using the \code{keys} method.
 #' @param columns that can be returned for each miRNA. All possible columns
 #' can be shown by using the \code{columns} method.
+#' @param libname Name of library (automatically passed on at start up)
+#' @param pkgname Package name (automatically passed on at start up)
 #' @return string vectors, for \code{select} a data.frame with selected
 #' columns.
 #' @examples
-#' #first load the annotations
-#' require(miRBaseVersions.db)
-#' #see all available tables
+# #first load the annotations
+# require(miRBaseVersions.db)
+#' # see all available tables
 #' keytypes(miRBaseVersions.db)
-# @examples
-# #direct targets in mouse aggregated from all sources:
-# targets_mouse <- getPredictedTargets('let-7a',species='mmu', method='geom')
-# #homology-translated targets in rat aggregated from all sources
-# targets_rat <- getPredictedTargets('let-7a',species='mmu', method='geom')
+#' # see column names
+#' columns(miRBaseVersions.db)
 NULL
 
 # The .onLoad will be called when the package is loaded.

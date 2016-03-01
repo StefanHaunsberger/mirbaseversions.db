@@ -20,6 +20,10 @@ select(x, keys, columns, keytype)
 .onLoad(libname, pkgname)
 }
 \arguments{
+\item{libname}{Name of library (automatically passed on at start up)}
+
+\item{pkgname}{Package name (automatically passed on at start up)}
+
 \item{x}{the \code{miRBaseVersions.db}}
 
 \item{keytype}{represents the table from which data shall be received.
@@ -52,10 +56,10 @@ and one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
 from version 21.0.
 }
 \examples{
-#first load the annotations
-require(miRBaseVersions.db)
-#see all available tables
+# see all available tables
 keytypes(miRBaseVersions.db)
+# see column names
+columns(miRBaseVersions.db)
 }
 \author{
 Stefan Haunsberger \email{stefanhaunsberger@rcsi.ie}
