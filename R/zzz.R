@@ -27,8 +27,9 @@ mirbaseversionsORGANISM = "Multiple"
 #' mature miRNA names from selected versions.
 #' @usage columns(x)
 #' keytypes(x)
-#' keys(x, keytype)
-#' select(x, keys, columns, keytype)
+#' keys(x, keytype,...)
+#' select(x, keys, columns, keytype,...)
+#' @param ... Optional parameters
 #' @param x the \code{miRBaseVersions.db}
 #' @param keytype represents the table from which data shall be received.
 #' All possible keytypes can be viewed by using the \code{keytypes} method.
