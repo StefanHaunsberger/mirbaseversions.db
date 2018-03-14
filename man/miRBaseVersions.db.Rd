@@ -14,8 +14,8 @@ release versions.}
 \usage{
 columns(x)
 keytypes(x)
-keys(x, keytype)
-select(x, keys, columns, keytype)
+keys(x, keytype,...)
+select(x, keys, columns, keytype,...)
 
 .onLoad(libname, pkgname)
 }
@@ -23,6 +23,8 @@ select(x, keys, columns, keytype)
 \item{libname}{Name of library (automatically passed on at start up)}
 
 \item{pkgname}{Package name (automatically passed on at start up)}
+
+\item{...}{Optional parameters}
 
 \item{x}{the \code{miRBaseVersions.db}}
 

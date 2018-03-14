@@ -7,13 +7,13 @@ mirbaseversionsORGANISM = "Multiple"
 
 #' @docType package
 #' @name miRBaseVersions.db
-#' @title miRBaseVersions.db: miRNA name collection of 21 different miRBase
+#' @title miRBaseVersions.db: miRNA name collection of 22 different miRBase
 #' release versions.
 #' @aliases columns keys keytypes select
 #' @details This annotation package comprises mature miRNA names from
-#' 21 different miRBase versions. It contains one main table holding all miRNAs
-#' and one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
-#' from version 21.0.
+#' 22 different miRBase versions. It contains one main table holding all miRNAs
+#' and one view for each version, such as 'vw-mimat-22.0' for mature miRNA names
+#' from version 22.0.
 #' @import AnnotationDbi methods DBI RSQLite gtools
 #' @author Stefan Haunsberger \email{stefanhaunsberger@rcsi.ie}
 #'
@@ -124,7 +124,7 @@ NULL
         # cols = grep("vw-mimat-[0-9]+\\.[0-9]$", dbListTables(con),
         #               value = TRUE);
         cols = (DBI::dbGetQuery(con,
-                                "PRAGMA table_info('vw-mimat-21.0')"))$name;
+                                "PRAGMA table_info('vw-mimat-22.0')"))$name;
         return(cols);
     }
 
@@ -289,4 +289,3 @@ NULL
 # {
 #     dbFileDisconnect(mirbaseversions_dbconn())
 # }
-
