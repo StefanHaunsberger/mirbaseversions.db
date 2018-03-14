@@ -1,0 +1,1349 @@
+ID   hsa-let-7a-1L     standard; RNA; UNK; 80 BP.
+XX
+AC   MI0000060;
+XX
+DE   Homo sapiens let-7a-1 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        6..27
+FT                   /product="hsa-let-7a"
+XX
+SQ   Sequence 80 BP; 21 A; 15 C; 19 G; 0 T; 25 other;
+     ugggaugagg uaguagguug uauaguuuua gggucacacc caccacuggg agauaacuau        60
+     acaaucuacu gucuuuccua                                                    80
+//
+ID   hsa-let-7a-2L     standard; RNA; UNK; 72 BP.
+XX
+AC   MI0000061;
+XX
+DE   Homo sapiens let-7a-2 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        5..26
+FT                   /product="hsa-let-7a"
+XX
+SQ   Sequence 72 BP; 20 A; 11 C; 18 G; 0 T; 23 other;
+     agguugaggu aguagguugu auaguuuaga auuacaucaa gggagauaac uguacagccu        60
+     ccuagcuuuc cu                                                            72
+//
+ID   hsa-let-7a-3L     standard; RNA; UNK; 74 BP.
+XX
+AC   MI0000062;
+XX
+DE   Homo sapiens let-7a-3 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        4..25
+FT                   /product="hsa-let-7a"
+XX
+SQ   Sequence 74 BP; 14 A; 13 C; 21 G; 0 T; 26 other;
+     gggugaggua guagguugua uaguuugggg cucugcccug cuaugggaua acuauacaau        60
+     cuacugucuu uccu                                                          74
+//
+ID   hsa-let-7bL       standard; RNA; UNK; 83 BP.
+XX
+AC   MI0000063;
+XX
+DE   Homo sapiens let-7b precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        6..27
+FT                   /product="hsa-let-7b"
+XX
+SQ   Sequence 83 BP; 16 A; 18 C; 26 G; 0 T; 23 other;
+     cggggugagg uaguagguug ugugguuuca gggcagugau guugccccuc ggaagauaac        60
+     uauacaaccu acugccuucc cug                                                83
+//
+ID   hsa-let-7cL       standard; RNA; UNK; 84 BP.
+XX
+AC   MI0000064;
+XX
+DE   Homo sapiens let-7c precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        11..32
+FT                   /product="hsa-let-7c"
+XX
+SQ   Sequence 84 BP; 17 A; 16 C; 24 G; 0 T; 27 other;
+     gcauccgggu ugagguagua gguuguaugg uuuagaguua cacccuggga guuaacugua        60
+     caaccuucua gcuuuccuug gagc                                               84
+//
+ID   hsa-let-7dL       standard; RNA; UNK; 87 BP.
+XX
+AC   MI0000065;
+XX
+DE   Homo sapiens let-7d precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        8..28
+FT                   /product="hsa-let-7d"
+XX
+SQ   Sequence 87 BP; 21 A; 16 C; 26 G; 0 T; 24 other;
+     ccuaggaaga gguaguaggu ugcauaguuu uagggcaggg auuuugccca caaggaggua        60
+     acuauacgac cugcugccuu ucuuagg                                            87
+//
+ID   hsa-let-7eL       standard; RNA; UNK; 79 BP.
+XX
+AC   MI0000066;
+XX
+DE   Homo sapiens let-7e precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        8..28
+FT                   /product="hsa-let-7e"
+XX
+SQ   Sequence 79 BP; 18 A; 20 C; 25 G; 0 T; 16 other;
+     cccgggcuga gguaggaggu uguauaguug aggaggacac ccaaggagau cacuauacgg        60
+     ccuccuagcu uuccccagg                                                     79
+//
+ID   hsa-let-7f-1L     standard; RNA; UNK; 87 BP.
+XX
+AC   MI0000067;
+XX
+DE   Homo sapiens let-7f-1 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        7..28
+FT                   /product="hsa-let-7f"
+XX
+SQ   Sequence 87 BP; 22 A; 13 C; 22 G; 0 T; 30 other;
+     ucagagugag guaguagauu guauaguugu gggguaguga uuuuacccug uucaggagau        60
+     aacuauacaa ucuauugccu ucccuga                                            87
+//
+ID   hsa-let-7f-2L     standard; RNA; UNK; 89 BP.
+XX
+AC   MI0000068;
+XX
+DE   Homo sapiens let-7f-2 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        9..30
+FT                   /product="hsa-let-7f"
+XX
+SQ   Sequence 89 BP; 21 A; 13 C; 24 G; 0 T; 31 other;
+     cugugggaug agguaguaga uuguauaguu gugggguagu gauuuuaccc uguucaggag        60
+     auaacuauac aaucuauugc cuucccuga                                          89
+//
+ID   hsa-mir-15        standard; RNA; UNK; 83 BP.
+XX
+AC   MI0000069;
+XX
+DE   Homo sapiens miR-15 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        14..35
+FT                   /product="hsa-miR-15"
+XX
+SQ   Sequence 83 BP; 26 A; 13 C; 22 G; 0 T; 22 other;
+     ccuuggagua aaguagcagc acauaauggu uuguggauuu ugaaaaggug caggccauau        60
+     ugugcugccu caaaaauaca agg                                                83
+//
+ID   hsa-mir-16-13     standard; RNA; UNK; 89 BP.
+XX
+AC   MI0000070;
+XX
+DE   Homo sapiens miR-16-13 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+RN   [2]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        14..35
+FT                   /product="hsa-miR-16"
+XX
+SQ   Sequence 89 BP; 26 A; 16 C; 20 G; 0 T; 27 other;
+     gucagcagug ccuuagcagc acguaaauau uggcguuaag auucuaaaau uaucuccagu        60
+     auuaacugug cugcugaagu aagguugac                                          89
+//
+ID   hsa-mir-17        standard; RNA; UNK; 84 BP.
+XX
+AC   MI0000071;
+XX
+DE   Homo sapiens miR-17 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        51..70
+FT                   /product="hsa-miR-17"
+XX
+SQ   Sequence 84 BP; 24 A; 13 C; 23 G; 0 T; 24 other;
+     gucagaauaa ugucaaagug cuuacagugc agguagugau augugcaucu acugcaguga        60
+     aggcacuugu agcauuaugg ugac                                               84
+//
+ID   hsa-mir-18        standard; RNA; UNK; 71 BP.
+XX
+AC   MI0000072;
+XX
+DE   Homo sapiens miR-18 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+RN   [2]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+RC   This sequence is named miR-18 precursor-13 is this paper.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        6..27
+FT                   /product="hsa-miR-18"
+XX
+SQ   Sequence 71 BP; 17 A; 15 C; 17 G; 0 T; 22 other;
+     uguucuaagg ugcaucuagu gcagauagug aaguagauua gcaucuacug cccuaagugc        60
+     uccuucuggc a                                                             71
+//
+ID   hsa-mir-19a       standard; RNA; UNK; 82 BP.
+XX
+AC   MI0000073;
+XX
+DE   Homo sapiens miR-19a precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+RN   [2]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+RC   This sequence is named miR-19a precursor-13 is this paper.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        49..71
+FT                   /product="hsa-miR-19a"
+XX
+SQ   Sequence 82 BP; 22 A; 15 C; 20 G; 0 T; 25 other;
+     gcaguccucu guuaguuuug cauaguugca cuacaagaag aauguaguug ugcaaaucua        60
+     ugcaaaacug augguggccu gc                                                 82
+//
+ID   hsa-mir-19b-1     standard; RNA; UNK; 87 BP.
+XX
+AC   MI0000074;
+XX
+DE   Homo sapiens miR-19b-1 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+RN   [2]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+RC   This sequence is named miR-19b precursor-13 is this paper.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        54..76
+FT                   /product="hsa-miR-19b"
+XX
+SQ   Sequence 87 BP; 18 A; 16 C; 22 G; 0 T; 31 other;
+     cacuguucua ugguuaguuu ugcagguuug cauccagcug ugugauauuc ugcugugcaa        60
+     auccaugcaa aacugacugu gguagug                                            87
+//
+ID   hsa-mir-19b-2     standard; RNA; UNK; 96 BP.
+XX
+AC   MI0000075;
+XX
+DE   Homo sapiens miR-19b-2 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+RN   [2]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+RC   This sequence is named miR-19b precursor-X is this paper.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        62..84
+FT                   /product="hsa-miR-19b"
+XX
+SQ   Sequence 96 BP; 27 A; 14 C; 19 G; 0 T; 36 other;
+     acauugcuac uuacaauuag uuuugcaggu uugcauuuca gcguauauau guauaugugg        60
+     cugugcaaau ccaugcaaaa cugauuguga uaaugu                                  96
+//
+ID   hsa-mir-20        standard; RNA; UNK; 71 BP.
+XX
+AC   MI0000076;
+XX
+DE   Homo sapiens miR-20 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        8..29
+FT                   /product="hsa-miR-20"
+XX
+SQ   Sequence 71 BP; 20 A; 11 C; 16 G; 0 T; 24 other;
+     guagcacuaa agugcuuaua gugcagguag uguuuaguua ucuacugcau uaugagcacu        60
+     uaaaguacug c                                                             71
+//
+ID   hsa-mir-21        standard; RNA; UNK; 72 BP.
+XX
+AC   MI0000077;
+XX
+DE   Homo sapiens miR-21 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+RN   [2]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+RC   This sequence is named miR-21 precursor-17 in this paper.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        8..29
+FT                   /product="hsa-miR-21"
+XX
+SQ   Sequence 72 BP; 16 A; 15 C; 20 G; 0 T; 21 other;
+     ugucggguag cuuaucagac ugauguugac uguugaaucu cauggcaaca ccagucgaug        60
+     ggcugucuga ca                                                            72
+//
+ID   hsa-mir-22        standard; RNA; UNK; 85 BP.
+XX
+AC   MI0000078;
+XX
+DE   Homo sapiens miR-22 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        53..74
+FT                   /product="hsa-miR-22"
+XX
+SQ   Sequence 85 BP; 17 A; 24 C; 22 G; 0 T; 22 other;
+     ggcugagccg caguaguucu ucaguggcaa gcuuuauguc cugacccagc uaaagcugcc        60
+     aguugaagaa cuguugcccu cugcc                                              85
+//
+ID   hsa-mir-23        standard; RNA; UNK; 73 BP.
+XX
+AC   MI0000079;
+XX
+DE   Homo sapiens miR-23 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+RN   [2]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+RC   This sequence is named miR-23 precursor-19 in this paper.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        45..65
+FT                   /product="hsa-miR-23"
+XX
+SQ   Sequence 73 BP; 13 A; 20 C; 22 G; 0 T; 18 other;
+     ggccggcugg gguuccuggg gaugggauuu gcuuccuguc acaaaucaca uugccaggga        60
+     uuuccaaccg acc                                                           73
+//
+ID   hsa-mir-24-1      standard; RNA; UNK; 68 BP.
+XX
+AC   MI0000080;
+XX
+DE   Homo sapiens miR-24-1 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+RN   [2]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+RC   This sequence is named miR-24 precursor-9 in this paper.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        44..65
+FT                   /product="hsa-miR-24"
+XX
+SQ   Sequence 68 BP; 16 A; 18 C; 16 G; 0 T; 18 other;
+     cuccggugcc uacugagcug auaucaguuc ucauuuuaca cacuggcuca guucagcagg        60
+     aacaggag                                                                 68
+//
+ID   hsa-mir-24-2      standard; RNA; UNK; 73 BP.
+XX
+AC   MI0000081;
+XX
+DE   Homo sapiens miR-24-2 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+RN   [2]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+RC   This sequence is named miR-24 precursor-19 in this paper.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        50..71
+FT                   /product="hsa-miR-24"
+XX
+SQ   Sequence 73 BP; 15 A; 20 C; 20 G; 0 T; 18 other;
+     cucugccucc cgugccuacu gagcugaaac acaguugguu uguguacacu ggcucaguuc        60
+     agcaggaaca ggg                                                           73
+//
+ID   hsa-mir-25        standard; RNA; UNK; 84 BP.
+XX
+AC   MI0000082;
+XX
+DE   Homo sapiens miR-25 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        52..73
+FT                   /product="hsa-miR-25"
+XX
+SQ   Sequence 84 BP; 12 A; 22 C; 31 G; 0 T; 19 other;
+     ggccaguguu gagaggcgga gacuugggca auugcuggac gcugcccugg gcauugcacu        60
+     ugucucgguc ugacagugcc ggcc                                               84
+//
+ID   hsa-mir-26a       standard; RNA; UNK; 75 BP.
+XX
+AC   MI0000083;
+XX
+DE   Homo sapiens miR-26a precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        10..31
+FT                   /product="hsa-miR-26a"
+XX
+SQ   Sequence 75 BP; 14 A; 19 C; 23 G; 0 T; 19 other;
+     guggccucgu ucaaguaauc caggauaggc ugugcagguc ccaauggccu aucuugguua        60
+     cuugcacggg gacgc                                                         75
+//
+ID   hsa-mir-26b       standard; RNA; UNK; 77 BP.
+XX
+AC   MI0000084;
+XX
+DE   Homo sapiens miR-26b precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        12..32
+FT                   /product="hsa-miR-26b"
+XX
+SQ   Sequence 77 BP; 13 A; 20 C; 23 G; 0 T; 21 other;
+     ccgggaccca guucaaguaa uucaggauag guugugugcu guccagccug uucuccauua        60
+     cuuggcucgg ggaccgg                                                       77
+//
+ID   hsa-mir-27        standard; RNA; UNK; 78 BP.
+XX
+AC   MI0000085;
+XX
+DE   Homo sapiens miR-27 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+RN   [2]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+RC   This sequence is named miR-27 precursor-19 in this paper.
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        51..72
+FT                   /product="hsa-miR-27"
+XX
+SQ   Sequence 78 BP; 15 A; 23 C; 24 G; 0 T; 16 other;
+     cugaggagca gggcuuagcu gcuugugagc aggguccaca ccaagucgug uucacagugg        60
+     cuaaguuccg ccccccag                                                      78
+//
+ID   hsa-mir-28        standard; RNA; UNK; 86 BP.
+XX
+AC   MI0000086;
+XX
+DE   Homo sapiens miR-28 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        14..35
+FT                   /product="hsa-miR-28"
+XX
+SQ   Sequence 86 BP; 16 A; 24 C; 21 G; 0 T; 25 other;
+     gguccuugcc cucaaggagc ucacagucua uugaguuacc uuucugacuu ucccacuaga        60
+     uugugagcuc cuggagggca ggcacu                                             86
+//
+ID   hsa-mir-29        standard; RNA; UNK; 64 BP.
+XX
+AC   MI0000087;
+XX
+DE   Homo sapiens miR-29 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        41..62
+FT                   /product="hsa-miR-29"
+XX
+SQ   Sequence 64 BP; 17 A; 10 C; 11 G; 0 T; 26 other;
+     augacugauu ucuuuuggug uucagaguca auauaauuuu cuagcaccau cugaaaucgg        60
+     uuau                                                                     64
+//
+ID   hsa-mir-30        standard; RNA; UNK; 71 BP.
+XX
+AC   MI0000088;
+XX
+DE   Homo sapiens miR-30 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        47..68
+FT                   /product="hsa-miR-30"
+XX
+SQ   Sequence 71 BP; 16 A; 17 C; 21 G; 0 T; 17 other;
+     gcgacuguaa acauccucga cuggaagcug ugaagccaca gaugggcuuu cagucggaug        60
+     uuugcagcug c                                                             71
+//
+ID   hsa-mir-31        standard; RNA; UNK; 71 BP.
+XX
+AC   MI0000089;
+XX
+DE   Homo sapiens miR-31 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        9..29
+FT                   /product="hsa-miR-31"
+XX
+SQ   Sequence 71 BP; 18 A; 16 C; 20 G; 0 T; 17 other;
+     ggagaggagg caagaugcug gcauagcugu ugaacuggga accugcuaug ccaacauauu        60
+     gccaucuuuc c                                                             71
+//
+ID   hsa-mir-32        standard; RNA; UNK; 70 BP.
+XX
+AC   MI0000090;
+XX
+DE   Homo sapiens miR-32 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        6..26
+FT                   /product="hsa-miR-32"
+XX
+SQ   Sequence 70 BP; 17 A; 11 C; 16 G; 0 T; 26 other;
+     ggagauauug cacauuacua aguugcaugu ugucacggcc ucaaugcaau uuagugugug        60
+     ugauauuuuc                                                               70
+//
+ID   hsa-mir-33        standard; RNA; UNK; 69 BP.
+XX
+AC   MI0000091;
+XX
+DE   Homo sapiens miR-33 precursor RNA
+XX
+RN   [1]
+RX   PUBMED; 11679670.
+RA   Lagos-Quintana M., Rauhut R., Lendeckel W., Tuschl T.;
+RT   "Identification of novel genes coding for small expressed RNAs";
+RL   Science 294:853-858(2001).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        6..24
+FT                   /product="hsa-miR-33"
+XX
+SQ   Sequence 69 BP; 13 A; 15 C; 18 G; 0 T; 23 other;
+     cuguggugca uuguaguugc auugcauguu cuggugguac ccaugcaaug uuuccacagu        60
+     gcaucacag                                                                69
+//
+ID   hsa-mir-91-13     standard; RNA; UNK; 82 BP.
+XX
+AC   MI0000092;
+XX
+DE   Homo sapiens miR-91-13 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        13..36
+FT                   /product="hsa-miR-91"
+FT   misc_RNA        50..69
+FT                   /product="hsa-miR-17"
+XX
+SQ   Sequence 82 BP; 24 A; 12 C; 22 G; 0 T; 24 other;
+     ucagaauaau gucaaagugc uuacagugca gguagugaua ugugcaucua cugcagugaa        60
+     ggcacuugua gcauuauggu ga                                                 82
+//
+ID   hsa-mir-92-13     standard; RNA; UNK; 78 BP.
+XX
+AC   MI0000093;
+XX
+DE   Homo sapiens miR-92-13 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        48..69
+FT                   /product="hsa-miR-92"
+XX
+SQ   Sequence 78 BP; 10 A; 15 C; 23 G; 0 T; 30 other;
+     cuuucuacac agguugggau cgguugcaau gcuguguuuc uguaugguau ugcacuuguc        60
+     ccggccuguu gaguuugg                                                      78
+//
+ID   hsa-mir-92-X      standard; RNA; UNK; 75 BP.
+XX
+AC   MI0000094;
+XX
+DE   Homo sapiens miR-92-X precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        48..69
+FT                   /product="hsa-miR-92"
+XX
+SQ   Sequence 75 BP; 14 A; 14 C; 20 G; 0 T; 27 other;
+     ucaucccugg guggggauuu guugcauuac uuguguucua uauaaaguau ugcacuuguc        60
+     ccggccugug gaaga                                                         75
+//
+ID   hsa-mir-93-7.1    standard; RNA; UNK; 80 BP.
+XX
+AC   MI0000095;
+XX
+DE   Homo sapiens miR-93-7.1 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        12..33
+FT                   /product="hsa-miR-93"
+XX
+SQ   Sequence 80 BP; 14 A; 25 C; 23 G; 0 T; 18 other;
+     cugggggcuc caaagugcug uucgugcagg uagugugauu acccaaccua cugcugagcu        60
+     agcacuuccc gagcccccgg                                                    80
+//
+ID   hsa-mir-93-7.2    standard; RNA; UNK; 80 BP.
+XX
+AC   MI0000096;
+XX
+DE   Homo sapiens miR-93-7.2 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        12..33
+FT                   /product="hsa-miR-93"
+XX
+SQ   Sequence 80 BP; 14 A; 25 C; 23 G; 0 T; 18 other;
+     cugggggcuc caaagugcug uucgugcagg uagugugauu acccaaccua cugcugagcu        60
+     agcacuuccc gagcccccgg                                                    80
+//
+ID   hsa-mir-95-4      standard; RNA; UNK; 81 BP.
+XX
+AC   MI0000097;
+XX
+DE   Homo sapiens miR-95-4 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        49..70
+FT                   /product="hsa-miR-95"
+XX
+SQ   Sequence 81 BP; 24 A; 16 C; 17 G; 0 T; 24 other;
+     aacacagugg gcacucaaua aaugucuguu gaauugaaau gcguuacauu caacggguau        60
+     uuauugagca cccacucugu g                                                  81
+//
+ID   hsa-mir-96-7      standard; RNA; UNK; 78 BP.
+XX
+AC   MI0000098;
+XX
+DE   Homo sapiens miR-96-7 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        9..30
+FT                   /product="hsa-miR-96"
+XX
+SQ   Sequence 78 BP; 16 A; 18 C; 19 G; 0 T; 25 other;
+     uggccgauuu uggcacuagc acauuuuugc uugugucucu ccgcucugag caaucaugug        60
+     cagugccaau augggaaa                                                      78
+//
+ID   hsa-mir-97-6      standard; RNA; UNK; 80 BP.
+XX
+AC   MI0000099;
+XX
+DE   Homo sapiens miR-97-6 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        10..32
+FT                   /product="hsa-miR-97"
+XX
+SQ   Sequence 80 BP; 18 A; 19 C; 23 G; 0 T; 20 other;
+     gugagcgacu guaaacaucc ucgacuggaa gcugugaagc cacagauggg cuuucagucg        60
+     gauguuugca gcugccuacu                                                    80
+//
+ID   hsa-mir-98-X      standard; RNA; UNK; 80 BP.
+XX
+AC   MI0000100;
+XX
+DE   Homo sapiens miR-98-X precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        2..23
+FT                   /product="hsa-miR-98"
+XX
+SQ   Sequence 80 BP; 23 A; 11 C; 20 G; 0 T; 26 other;
+     gugagguagu aaguuguauu guuguggggu agggauauua ggccccaauu agaagauaac        60
+     uauacaacuu acuacuuucc                                                    80
+//
+ID   hsa-mir-99-21     standard; RNA; UNK; 81 BP.
+XX
+AC   MI0000101;
+XX
+DE   Homo sapiens miR-99-21 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        13..34
+FT                   /product="hsa-miR-99"
+XX
+SQ   Sequence 81 BP; 16 A; 20 C; 23 G; 0 T; 22 other;
+     cccauuggca uaaacccgua gauccgaucu uguggugaag uggaccgcac aagcucgcuu        60
+     cuaugggucu gugucagugu g                                                  81
+//
+ID   hsa-mir-100-11    standard; RNA; UNK; 80 BP.
+XX
+AC   MI0000102;
+XX
+DE   Homo sapiens miR-100-11 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        13..34
+FT                   /product="hsa-miR-100"
+XX
+SQ   Sequence 80 BP; 18 A; 18 C; 19 G; 0 T; 25 other;
+     ccuguugcca caaacccgua gauccgaacu ugugguauua guccgcacaa gcuuguaucu        60
+     auagguaugu gucuguuagg                                                    80
+//
+ID   hsa-mir-101-1     standard; RNA; UNK; 75 BP.
+XX
+AC   MI0000103;
+XX
+DE   Homo sapiens miR-101-1 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        47..68
+FT                   /product="hsa-miR-101"
+XX
+SQ   Sequence 75 BP; 19 A; 15 C; 19 G; 0 T; 22 other;
+     ugcccuggcu caguuaucac agugcugaug cugucuauuc uaaagguaca guacugugau        60
+     aacugaagga uggca                                                         75
+//
+ID   hsa-mir-101-9     standard; RNA; UNK; 75 BP.
+XX
+AC   MI0000104;
+XX
+DE   Homo sapiens miR-101-9 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        47..68
+FT                   /product="hsa-miR-101"
+XX
+SQ   Sequence 75 BP; 19 A; 11 C; 19 G; 0 T; 26 other;
+     uguccuuuuu cgguuaucau gguaccgaug cuguauaucu gaaagguaca guacugugau        60
+     aacugaagaa uggug                                                         75
+//
+ID   hsa-mir-102-7.1   standard; RNA; UNK; 81 BP.
+XX
+AC   MI0000105;
+XX
+DE   Homo sapiens miR-102-7.1 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        51..70
+FT                   /product="hsa-miR-102"
+XX
+SQ   Sequence 81 BP; 19 A; 10 C; 22 G; 0 T; 30 other;
+     cuucaggaag cugguuucau auggugguuu agauuuaaau agugauuguc uagcaccauu        60
+     ugaaaucagu guucuugggg g                                                  81
+//
+ID   hsa-mir-102-7.2   standard; RNA; UNK; 81 BP.
+XX
+AC   MI0000106;
+XX
+DE   Homo sapiens miR-102-7.2 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        51..70
+FT                   /product="hsa-miR-102"
+XX
+SQ   Sequence 81 BP; 19 A; 10 C; 22 G; 0 T; 30 other;
+     cuucaggaag cugguuucau auggugguuu agauuuaaau agugauuguc uagcaccauu        60
+     ugaaaucagu guucuugggg g                                                  81
+//
+ID   hsa-mir-102-1     standard; RNA; UNK; 81 BP.
+XX
+AC   MI0000107;
+XX
+DE   Homo sapiens miR-102-1 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        52..71
+FT                   /product="hsa-miR-102"
+XX
+SQ   Sequence 81 BP; 17 A; 14 C; 18 G; 0 T; 32 other;
+     cuucuggaag cugguuucac augguggcuu agauuuuucc aucuuuguau cuagcaccau        60
+     uugaaaucag uguuuuagga g                                                  81
+//
+ID   hsa-mir-103-20    standard; RNA; UNK; 78 BP.
+XX
+AC   MI0000108;
+XX
+DE   Homo sapiens miR-103-20 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        48..70
+FT                   /product="hsa-miR-103-20"
+XX
+SQ   Sequence 78 BP; 20 A; 17 C; 17 G; 0 T; 24 other;
+     uugugcuuuc agcuucuuua cagugcugcc uuguagcauu caggucaagc aacauuguac        60
+     agggcuauga aagaacca                                                      78
+//
+ID   hsa-mir-103-5     standard; RNA; UNK; 78 BP.
+XX
+AC   MI0000109;
+XX
+DE   Homo sapiens miR-103-5 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        48..70
+FT                   /product="hsa-miR-103-5"
+XX
+SQ   Sequence 78 BP; 16 A; 18 C; 20 G; 0 T; 24 other;
+     uacugcccuc ggcuucuuua cagugcugcc uuguugcaua uggaucaagc agcauuguac        60
+     agggcuauga aggcauug                                                      78
+//
+ID   hsa-mir-104-17    standard; RNA; UNK; 78 BP.
+XX
+AC   MI0000110;
+XX
+DE   Homo sapiens miR-104-17 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        47..68
+FT                   /product="hsa-miR-104"
+XX
+SQ   Sequence 78 BP; 25 A; 20 C; 17 G; 0 T; 16 other;
+     aaaugucaga cagcccaucg acugguguug ccaugagauu caacagucaa caucagucug        60
+     auaagcuacc cgacaagg                                                      78
+//
+ID   hsa-mir-105-X.1   standard; RNA; UNK; 81 BP.
+XX
+AC   MI0000111;
+XX
+DE   Homo sapiens miR-105-X.1 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        13..32
+FT                   /product="hsa-miR-105"
+XX
+SQ   Sequence 81 BP; 14 A; 19 C; 24 G; 0 T; 24 other;
+     ugugcaucgu ggucaaaugc ucagacuccu gugguggcug cucaugcacc acggauguuu        60
+     gagcaugugc uacggugucu a                                                  81
+//
+ID   hsa-mir-105-X.2   standard; RNA; UNK; 81 BP.
+XX
+AC   MI0000112;
+XX
+DE   Homo sapiens miR-105-X.2 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        13..32
+FT                   /product="hsa-miR-105"
+XX
+SQ   Sequence 81 BP; 14 A; 19 C; 24 G; 0 T; 24 other;
+     ugugcaucgu ggucaaaugc ucagacuccu gugguggcug cucaugcacc acggauguuu        60
+     gagcaugugc uacggugucu a                                                  81
+//
+ID   hsa-mir-106-X     standard; RNA; UNK; 81 BP.
+XX
+AC   MI0000113;
+XX
+DE   Homo sapiens miR-106-X precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        13..36
+FT                   /product="hsa-miR-106"
+XX
+SQ   Sequence 81 BP; 21 A; 17 C; 17 G; 0 T; 26 other;
+     ccuuggccau guaaaagugc uuacagugca gguagcuuuu ugagaucuac ugcaauguaa        60
+     gcacuucuua cauuaccaug g                                                  81
+//
+ID   hsa-mir-107-10    standard; RNA; UNK; 81 BP.
+XX
+AC   MI0000114;
+XX
+DE   Homo sapiens miR-107-10 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        50..72
+FT                   /product="hsa-miR-107"
+XX
+SQ   Sequence 81 BP; 18 A; 19 C; 19 G; 0 T; 25 other;
+     cucucugcuu ucagcuucuu uacaguguug ccuuguggca uggaguucaa gcagcauugu        60
+     acagggcuau caaagcacag a                                                  81
+//
+ID   hsa-mir-16-3      standard; RNA; UNK; 81 BP.
+XX
+AC   MI0000115;
+XX
+DE   Homo sapiens miR-16-3 precursor RNA
+XX
+RN   [1]
+RX   MEDLINE; 21912064.
+RX   PUBMED; 11914277.
+RA   Mourelatos Z., Dostie J., Paushkin S., Sharma A., Charroux B., Abel L.,
+RA   Rappsilber J., Mann M., Dreyfuss G.;
+RT   "miRNPs: a novel class of ribonucleoproteins containing numerous
+RT   microRNAs";
+RL   Genes Dev. 16(6):720-728(2002).
+XX
+FH   Key             Location/Qualifiers
+FH
+FT   misc_RNA        10..31
+FT                   /product="hsa-miR-16"
+XX
+SQ   Sequence 81 BP; 25 A; 15 C; 15 G; 0 T; 26 other;
+     guuccacucu agcagcacgu aaauauuggc guagugaaau auauauuaaa caccaauauu        60
+     acugugcugc uuuaguguga c                                                  81
+//

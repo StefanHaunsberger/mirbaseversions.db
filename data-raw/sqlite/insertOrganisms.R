@@ -1,19 +1,19 @@
 # This function populates the mi2mimat sqlite table
 #	It the downloaded file from miRBase as input
-# 
+#
 # Author: stefanhaunsberger
 ###############################################################################
 
 
 insertOrganism = function(input.path, db, uri, verbose = TRUE) {
-	
+
 	args <- as.list(match.call());
-	
+
 	if (is.null(args$input.path)) {
-		input.path = file.path("doc", "miRBase", "organisms.txt");
+		input.path = file.path("data-raw", "miRBase", "raw-files");
 		input.file = file.path(input.path, "organisms.txt");
 	}
-	
+
 	if (is.null(args$db)) {
 		if (is.null(args$uri)) {
 #			stop("Please provide either 'db' or 'uri'.");
@@ -38,17 +38,17 @@ insertOrganism = function(input.path, db, uri, verbose = TRUE) {
 #		writeLines("Delete table content from table 'organism'.");
 #	}
 #	dbSendQuery(db, "DELETE FROM organism");
-	
+
 	org = read.table(file = input.file, header = TRUE, sep = "\t", stringsAsFactors = FALSE);
-	
+
 	# Populate table
 	dbWriteTable(conn = db, name = "organism", value = org, row.names = FALSE, overwrite = TRUE);
-	
+
 	if (is.null(args$db)) {
 		writeLines("Disconnect from db 'miRBase'.");
 		dbDisconnect(db);
 	}
-	
+
 	return();
-	
+
 }

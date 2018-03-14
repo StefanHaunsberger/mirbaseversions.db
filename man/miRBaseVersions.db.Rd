@@ -2,13 +2,13 @@
 % Please edit documentation in R/zzz.R
 \docType{package}
 \name{miRBaseVersions.db}
-\alias{.onLoad}
+\alias{miRBaseVersions.db}
 \alias{columns}
 \alias{keys}
 \alias{keytypes}
-\alias{miRBaseVersions.db}
-\alias{miRBaseVersions.db-package}
 \alias{select}
+\alias{miRBaseVersions.db-package}
+\alias{.onLoad}
 \title{miRBaseVersions.db: miRNA name collection of 21 different miRBase
 release versions.}
 \usage{
@@ -64,4 +64,3 @@ columns(miRBaseVersions.db)
 \author{
 Stefan Haunsberger \email{stefanhaunsberger@rcsi.ie}
 }
-

@@ -151,7 +151,7 @@ NULL
     {
         con = AnnotationDbi::dbconn(x);
         ## Receive table names
-        tables = grep("vw-mimat-[0-9]+\\.[0-9]$|^\\bmimat\\b",
+        tables = grep("vw-mimat-[0-9]+\\.[0-9](-hsa)?$|^\\bmimat\\b",
                       DBI::dbListTables(con), value = TRUE);
         names(tables) = toupper(tables);
         return(tables);
@@ -201,7 +201,7 @@ NULL
         ## Get columns
         colsSQL = character();
         colsLC = .getLCColnames(x);
-        if (columns != "*") {
+        if (any(columns != "*")) {
             colsUC = .cols(x);
             cols = colsLC[colsUC %in% columns];
             colsSQL = paste(cols, collapse = ", ");
@@ -210,7 +210,7 @@ NULL
         }
         ## get the connection
         con = AnnotationDbi::dbconn(x);
-        sql = sprintf(paste("SELECT %s FROM %s",
+        sql = sprintf(paste("SELECT %s FROM `%s`",
                             "WHERE UPPER(accession) IN ('%s')"),
                 colsSQL, keytypeLC,
                 paste(toupper(keys), collapse = "', '"));

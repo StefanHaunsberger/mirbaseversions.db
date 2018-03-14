@@ -1,16 +1,16 @@
-# miRNA.diff
-#
-# Describes differences between the current release (9.1) and the
-# previous one (9.0).  Differences are labelled with the following
-# tags:
-#
-# NEW           new to the database
-# DELETE        removed since the last release
-# SEQUENCE      sequence has changed
-# NAME          ID has changed
-#
-# Hairpin precursor sequences start here
-#
+# miRNA.diff		
+#		
+# Describes differences between the current release (9.1) and the		
+# previous one (9.0).  Differences are labelled with the following		
+# tags:		
+#		
+# NEW           new to the database		
+# DELETE        removed since the last release		
+# SEQUENCE      sequence has changed		
+# NAME          ID has changed		
+#		
+# Hairpin precursor sequences start here		
+#		
 MI0000826	hsa-mir-346	SEQUENCE
 MI0000968	rno-mir-297	SEQUENCE
 MI0001177	gga-mir-222	NAME
@@ -120,9 +120,9 @@ MI0005446	ath-MIR868	NEW
 MI0005447	ath-MIR869	NEW
 MI0005448	ath-MIR870	NEW
 MI0005450	mmu-mir-181d	NEW
-#
-# Mature sequences start here
-#
+#		
+# Mature sequences start here		
+#		
 MIMAT0000013	cel-miR-42	SEQUENCE
 MIMAT0000021	cel-miR-50	SEQUENCE
 MIMAT0000033	cel-miR-61	SEQUENCE
@@ -161,8 +161,10 @@ MIMAT0002559	ptr-miR-216	SEQUENCE
 MIMAT0002771	ptr-miR-25	SEQUENCE
 MIMAT0003262	hsa-miR-594	DELETE
 MIMAT0003807	bta-miR-545	NAME
-MIMAT0003931	ath-miR472	SEQUENCE	NAME
-MIMAT0003939	ath-miR780.2	SEQUENCE	NAME
+MIMAT0003931	ath-miR472	SEQUENCE
+MIMAT0003939	ath-miR780.2	SEQUENCE
+MIMAT0003931	ath-miR472	NAME
+MIMAT0003939	ath-miR780.2	NAME
 MIMAT0004215	cel-miR-253	NEW
 MIMAT0004216	cel-miR-255	NEW
 MIMAT0004217	mmu-miR-465-3p	NEW

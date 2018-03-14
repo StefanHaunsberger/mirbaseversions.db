@@ -1,13 +1,13 @@
 # This function populates the mi sqlite table
 #	It either takes an input file (tab separated text file) or a df
-# 
+#
 # Author: stefanhaunsberger
 ###############################################################################
 
 insertMI = function(input.file, df, db, uri, verbose = TRUE) {
-	
+
 	args <- as.list(match.call());
-	
+
 #	if (all(is.null(args$input.path), is.null(args$df))) {
 #		stop("Please provide input path or filename.");
 #	}
@@ -21,7 +21,7 @@ insertMI = function(input.file, df, db, uri, verbose = TRUE) {
 		}
 		message(sprintf("Set input.file to '%s'...", input.file));
 	}
-	
+
 	if (is.null(args$db)) {
 		if (is.null(args$uri)) {
 #			stop("Please provide either 'db' or 'uri'.");
@@ -46,7 +46,7 @@ insertMI = function(input.file, df, db, uri, verbose = TRUE) {
 #		writeLines("Delete table content from table 'organism'.");
 #	}
 #	dbSendQuery(db, "DELETE FROM organism");
-	
+
 	if (length(input.path) != 0) {
 		df = read.table(file = input.file, header = TRUE, sep = "\t", stringsAsFactors = FALSE);
 	}
@@ -55,18 +55,19 @@ insertMI = function(input.file, df, db, uri, verbose = TRUE) {
 			writeLines("Disconnect from db 'miRBase'.");
 			dbDisconnect(db);
 		}
-		stop("Columns names don't match");	
+		stop("Columns names don't match");
 	}
-	
+
 	writeLines(sprintf("Inserting %i records into table 'mi'...", nrow(df)));
 	# Populate table
+	# dbWriteTable(conn = db, name = "mi", value = df[,c("accession", "name", "sequence", "version", "organism", "change")], row.names = FALSE, overwrite = TRUE);
 	dbWriteTable(conn = db, name = "mi", value = df, row.names = FALSE, overwrite = TRUE);
-	
+
 	if (is.null(args$db)) {
 		writeLines("Disconnect from db 'miRBase'.");
 		dbDisconnect(db);
 	}
-	
+
 	return();
-	
+
 }

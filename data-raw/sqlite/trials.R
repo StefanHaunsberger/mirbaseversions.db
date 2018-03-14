@@ -1,5 +1,5 @@
 # TODO: Add comment
-# 
+#
 # Author: stefanhaunsberger
 ###############################################################################
 ##
@@ -18,7 +18,7 @@ db <- dbConnect(SQLite(), dbname = "C:\\sqlite\\miRBaseNames.db");
 # For tables
 dbListTables(db);
 # For fields in a table
-dbListFields(db, "versions");
+dbListFields(db, "version");
 
 
 # Close connection to db

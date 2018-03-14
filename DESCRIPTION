@@ -1,9 +1,9 @@
 Package: miRBaseVersions.db
 Type: Package
-Title: Collection of mature miRNA names of 21 different miRBase release versions
-Version: 0.99.3
+Title: Collection of mature miRNA names of 22 different miRBase release versions
+Version: 1.1.0
 Authors@R: person("Stefan", "Haunsberger", email = "stefan.haunsberger@gmail.com", role = c("aut", "cre"))
-Description: Annotation package containing all available miRNA names from all versions (data from http://www.mirbase.org/).
+Description: Annotation package containing all available miRNA names from 22 versions (data from http://www.mirbase.org/).
 License: Artistic-2.0
 Imports: AnnotationDbi, DBI, RSQLite, methods, gtools
 biocViews: Preprocessing, miRNA, AnnotationData
@@ -14,4 +14,4 @@ Suggests:
     rmarkdown,
     annotate
 VignetteBuilder: knitr
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
