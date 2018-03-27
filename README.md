@@ -4,26 +4,22 @@ author: "Stefan J. Haunsberger"
 date: "26 March 2018"
     output: html_document
         toc: yes
-bibliography: references.bib
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-The [miRBase](http://www.mirbase.org) database [@Griffiths-Jones01012004; 
-@Griffiths-Jones01012006; @Griffiths-Jones01012008; @Kozomara01012011; 
-@Kozomara01012014] is the official repository for miRNAs and includes a miRNA 
-naming convention [@AMBROS01032003; @meyers2008criteria].
-Over the years of development miRNAs have been added to, or deleted from the 
-database, while some miRNA names have been changed. As a result, each version 
-of the miRBase database can differ substantially from previous versions. 
 
 The _miRBaseVersions.db_ R package has been developed to provide an easy 
-accessible repository for several different miRBase release versions.
-  
-  
-## 1. Introduction
+accessible repository for several different miRBase release versions ([miRBase](http://www.mirbase.org)).
+It contains 22 different miRBase release versions and implements the `select` interface.
+
+1. [Introduction](#introduction)
+2. [Use Cases](#useCases)
+2.1 [Function `keytypes`](#keytypes)
+2.2 [Function `columns`](#cols)
+2.3 [Function `keys`](#keys)
+2.4 [Function `select`](#sel)
+3. [Additional Information](#info)
+
+## <a name="#introduction"></a>1. Introduction
 
 The _miRBaseVersions.db_ package is an annotation package which includes 
 mature miRNA names from 22 miRBase release versions. Due to ongoing growth and 
@@ -48,12 +44,6 @@ following command:
 ```{r highlight = TRUE}
 library(miRBaseVersions.db)
 ```
-
-### Vignette Info
-
-This vignette has been generated using an R Markdown file with 
-`knitr:rmarkdown` as vignette engine [@bibtex; @knitr1; @knitr2; @knitr3; 
-@knitcitations].
 
 ### Database information
 
@@ -92,10 +82,9 @@ are available:
 
 from 271 organisms.
 
+## <a name="#useCases"></a>2. Use Cases
 
-## 2. Use Cases
-
-### 2.1 Function `keytypes`
+### <a name="#keytypes"></a>2.1 Function `keytypes`
 
 Use this function to receive table names from where data can be retrieved:
 ```{r highlight=TRUE}
@@ -108,7 +97,7 @@ the prefix "VW-MIMAT" are so called SQL views. For example the keytype
 "VW-MIMAT-22.0" is an SQL view from the "MIMAT" table which only holds records
 from miRBase version 22.0.
 
-### 2.2 Function `columns`
+### <a name="#cols"></a>2.2 Function `columns`
 
 Use the `columns` function to retreive information about the kind of variables
 you can retrieve in the final output:
@@ -118,7 +107,7 @@ columns(miRBaseVersions.db);
 All `r length(columns(miRBaseVersions.db))` columns are available for all 
 `r length(keytypes(miRBaseVersions.db))` keytypes.
 
-### 2.3 Function `keys`
+### <a name="#keys"></a>2.3 Function `keys`
 
 The `keys` function returns all viable keys of a praticular `keytype`. The 
 following example retrieves all possible keys for miRBase release version 6.0.
@@ -127,7 +116,7 @@ k = head(keys(miRBaseVersions.db, keytype = "VW-MIMAT-6.0"));
 k;
 ```
 
-### 2.4 Function `select`
+### <a name="#sel"></a>2.4 Function `select`
 
 The `select` function is used to extract data. As input values the function
 takes outputs received from the other three functions `keys`, 
@@ -155,8 +144,7 @@ result;
 In comparison to the previous output with parameter `columns = "*"` this time
 only the selected columns were returned.
 
-
-## Additional information
+## <a name="#info"></a>Additional information
 
 ### Packages loaded via namespace
 The following packages are used in the `miRBaseVersions.db` package: 
@@ -169,5 +157,3 @@ The following packages are used in the `miRBaseVersions.db` package:
 ### Future Aspects
 This database can only be of good use if it will be kept up to date.
 Therefore we plan to include new miRBase releases as soon as possible.
-
-## References {-}
