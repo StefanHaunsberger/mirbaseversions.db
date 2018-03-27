@@ -5,14 +5,14 @@ The _miRBaseVersions.db_ R package has been developed to provide an easy accessi
 It contains 22 different miRBase release versions and implements the `select` interface.
 
 * [Introduction](#introduction)
-* [Use Cases](#useCases)
+* [Use Cases](#use-cases)
    - [Function `keytypes`](#keytypes)
    - [Function `columns`](#cols)
    - [Function `keys`](#keys)
    - [Function `select`](#sel)
 * [Additional Information](#info)
 
-## <a name="#introduction"></a>1. Introduction
+##Introduction
 
 The _miRBaseVersions.db_ package is an annotation package which includes 
 mature miRNA names from 22 miRBase release versions. Due to ongoing growth and 
@@ -38,13 +38,9 @@ following command:
 library(miRBaseVersions.db)
 ```
 
-### Database information
+###Database information
 
-The data is the 
-_miRNAmeConverter_ package is stored in an SQLite database. All entries 
-contained in the database were downloaded from the 
-[miRBase ftp-site](ftp://mirbase.org/pub/mirbase/). The following versions 
-are available:
+The data is the _miRNAmeConverter_ package is stored in an SQLite database. All entries contained in the database were downloaded from the [miRBase ftp-site](ftp://mirbase.org/pub/mirbase/). The following versions are available:
 
 
 |miRBase Version |Release Date	  | # Mature entries|
@@ -75,7 +71,7 @@ are available:
 
 from 271 organisms.
 
-## <a name="#useCases"></a>Use Cases
+##Use Cases
 
 ### <a name="#keytypes"></a>Function `keytypes`
 
