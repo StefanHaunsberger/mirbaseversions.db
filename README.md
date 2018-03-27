@@ -11,13 +11,13 @@ The _miRBaseVersions.db_ R package has been developed to provide an easy
 accessible repository for several different miRBase release versions ([miRBase](http://www.mirbase.org)).
 It contains 22 different miRBase release versions and implements the `select` interface.
 
-1. [Introduction](#introduction)
-2. [Use Cases](#useCases)
-2.1 [Function `keytypes`](#keytypes)
-2.2 [Function `columns`](#cols)
-2.3 [Function `keys`](#keys)
-2.4 [Function `select`](#sel)
-3. [Additional Information](#info)
+* [Introduction](#introduction)
+* [Use Cases](#useCases)
+   - [Function `keytypes`](#keytypes)
+   - [Function `columns`](#cols)
+   - [Function `keys`](#keys)
+   - [Function `select`](#sel)
+* [Additional Information](#info)
 
 ## <a name="#introduction"></a>1. Introduction
 
@@ -82,9 +82,9 @@ are available:
 
 from 271 organisms.
 
-## <a name="#useCases"></a>2. Use Cases
+## <a name="#useCases"></a>Use Cases
 
-### <a name="#keytypes"></a>2.1 Function `keytypes`
+### <a name="#keytypes"></a>Function `keytypes`
 
 Use this function to receive table names from where data can be retrieved:
 ```{r highlight=TRUE}
@@ -97,7 +97,7 @@ the prefix "VW-MIMAT" are so called SQL views. For example the keytype
 "VW-MIMAT-22.0" is an SQL view from the "MIMAT" table which only holds records
 from miRBase version 22.0.
 
-### <a name="#cols"></a>2.2 Function `columns`
+### <a name="#cols"></a>Function `columns`
 
 Use the `columns` function to retreive information about the kind of variables
 you can retrieve in the final output:
@@ -107,7 +107,7 @@ columns(miRBaseVersions.db);
 All `r length(columns(miRBaseVersions.db))` columns are available for all 
 `r length(keytypes(miRBaseVersions.db))` keytypes.
 
-### <a name="#keys"></a>2.3 Function `keys`
+### <a name="#keys"></a>Function `keys`
 
 The `keys` function returns all viable keys of a praticular `keytype`. The 
 following example retrieves all possible keys for miRBase release version 6.0.
@@ -116,7 +116,7 @@ k = head(keys(miRBaseVersions.db, keytype = "VW-MIMAT-6.0"));
 k;
 ```
 
-### <a name="#sel"></a>2.4 Function `select`
+### <a name="#sel"></a>Function `select`
 
 The `select` function is used to extract data. As input values the function
 takes outputs received from the other three functions `keys`, 
