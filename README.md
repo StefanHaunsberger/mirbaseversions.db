@@ -1,14 +1,7 @@
----
-title: "README"
-author: "Stefan J. Haunsberger"
-date: "26 March 2018"
-    output: html_document
-        toc: yes
----
 
+# miRBaseVersions.db
 
-The _miRBaseVersions.db_ R package has been developed to provide an easy 
-accessible repository for several different miRBase release versions ([miRBase](http://www.mirbase.org)).
+The _miRBaseVersions.db_ R package has been developed to provide an easy accessible repository for several different miRBase release versions ([miRBase](http://www.mirbase.org)).
 It contains 22 different miRBase release versions and implements the `select` interface.
 
 * [Introduction](#introduction)
