@@ -12,7 +12,7 @@ It contains 22 different miRBase release versions and implements the `select` in
    - [Function `select`](#sel)
 * [Additional Information](#info)
 
-##Introduction
+## Introduction
 
 The _miRBaseVersions.db_ package is an annotation package which includes 
 mature miRNA names from 22 miRBase release versions. Due to ongoing growth and 
@@ -38,7 +38,7 @@ following command:
 library(miRBaseVersions.db)
 ```
 
-###Database information
+### Database information
 
 The data is the _miRNAmeConverter_ package is stored in an SQLite database. All entries contained in the database were downloaded from the [miRBase ftp-site](ftp://mirbase.org/pub/mirbase/). The following versions are available:
 
@@ -71,7 +71,7 @@ The data is the _miRNAmeConverter_ package is stored in an SQLite database. All 
 
 from 271 organisms.
 
-##Use Cases
+## Use Cases
 
 ### <a name="#keytypes"></a>Function `keytypes`
 
