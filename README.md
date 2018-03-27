@@ -34,7 +34,7 @@ values provided by the other three methods.
 To load the package and gain access to the functions just run the 
 following command:
 
-```{r highlight = TRUE}
+```r
 library(miRBaseVersions.db)
 ```
 
@@ -76,7 +76,7 @@ from 271 organisms.
 ### Function `keytypes`
 
 Use this function to receive table names from where data can be retrieved:
-```{r highlight=TRUE}
+```r
 keytypes(miRBaseVersions.db);
 ```
 The output lists `r length(keytypes(miRBaseVersions.db))` tables where each one
@@ -90,7 +90,7 @@ from miRBase version 22.0.
 
 Use the `columns` function to retreive information about the kind of variables
 you can retrieve in the final output:
-```{r highlight=TRUE}
+```r
 columns(miRBaseVersions.db);
 ```
 All `r length(columns(miRBaseVersions.db))` columns are available for all 
@@ -100,9 +100,9 @@ All `r length(columns(miRBaseVersions.db))` columns are available for all
 
 The `keys` function returns all viable keys of a praticular `keytype`. The 
 following example retrieves all possible keys for miRBase release version 6.0.
-```{r highlight=TRUE}
+```r
 k = head(keys(miRBaseVersions.db, keytype = "VW-MIMAT-6.0"));
-k;
+k
 ```
 
 ### Function `select`
@@ -112,23 +112,20 @@ takes outputs received from the other three functions `keys`,
 `columns` and `keytypes`.  
 For exmaple to extract all information about the mature 
 accession 'MIMAT0000092' we can run the following command:
-```{r highlight=TRUE}
+```r
 result = select(miRBaseVersions.db, 
                 keys = "MIMAT0000092", 
                 keytype = "MIMAT", 
                 columns = "*")
-result;
+result
 ```
-As we can see the result returns all miRNA names the accession had among the
-different miRBase releases.
-If we for example only want to extract the fields for 'accession', 'name' and 
-'version' we simply run the following command:
-```{r highlight=TRUE}
+As we can see the result returns all miRNA names the accession had among the different miRBase releases. If we for example only want to extract the fields for 'accession', 'name' and 'version' we simply run the following command:
+```r
 result = select(miRBaseVersions.db, 
                 keys = "MIMAT0000092", 
                 keytype = "MIMAT", 
                 columns = c("ACCESSION", "NAME", "VERSION"))
-result;
+result
 ```
 In comparison to the previous output with parameter `columns = "*"` this time
 only the selected columns were returned.
@@ -138,10 +135,10 @@ only the selected columns were returned.
 ### Packages loaded via namespace
 The following packages are used in the `miRBaseVersions.db` package: 
 
-* AnnotationDbi_1.32.3 [@annotationdbicite]
-* DBI_0.3.1 [@dbicite]
-* RSQLite_1.0.0 [@rsqlitecite]
-* gtools_3.5.0 [@gtoolscite]
+* AnnotationDbi_1.32.3
+* DBI_0.3.1 [visit on CARN][http://CRAN.R-project.org/package=RSQLite]
+* RSQLite_1.0.0 [visit on CARN](http://CRAN.R-project.org/package=DBI)
+* gtools_3.5.0 [visit on CRAN](https://CRAN.R-project.org/package=gtools)
 
 ### Future Aspects
 This database can only be of good use if it will be kept up to date.
