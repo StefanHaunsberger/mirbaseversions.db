@@ -6,11 +6,11 @@ It contains 22 different miRBase release versions and implements the `select` in
 
 * [Introduction](#introduction)
 * [Use Cases](#use-cases)
-   - [Function `keytypes`](#keytypes)
-   - [Function `columns`](#cols)
-   - [Function `keys`](#keys)
-   - [Function `select`](#sel)
-* [Additional Information](#info)
+   - [Function `keytypes`](#function-keytypes)
+   - [Function `columns`](#function-columns)
+   - [Function `keys`](#function-keys)
+   - [Function `select`](#function-select)
+* [Additional Information](#additional-information)
 
 ## Introduction
 
@@ -73,7 +73,7 @@ from 271 organisms.
 
 ## Use Cases
 
-### <a name="#keytypes"></a>Function `keytypes`
+### Function `keytypes`
 
 Use this function to receive table names from where data can be retrieved:
 ```{r highlight=TRUE}
@@ -86,7 +86,7 @@ the prefix "VW-MIMAT" are so called SQL views. For example the keytype
 "VW-MIMAT-22.0" is an SQL view from the "MIMAT" table which only holds records
 from miRBase version 22.0.
 
-### <a name="#cols"></a>Function `columns`
+### Function `columns`
 
 Use the `columns` function to retreive information about the kind of variables
 you can retrieve in the final output:
@@ -96,7 +96,7 @@ columns(miRBaseVersions.db);
 All `r length(columns(miRBaseVersions.db))` columns are available for all 
 `r length(keytypes(miRBaseVersions.db))` keytypes.
 
-### <a name="#keys"></a>Function `keys`
+### Function `keys`
 
 The `keys` function returns all viable keys of a praticular `keytype`. The 
 following example retrieves all possible keys for miRBase release version 6.0.
@@ -105,7 +105,7 @@ k = head(keys(miRBaseVersions.db, keytype = "VW-MIMAT-6.0"));
 k;
 ```
 
-### <a name="#sel"></a>Function `select`
+### Function `select`
 
 The `select` function is used to extract data. As input values the function
 takes outputs received from the other three functions `keys`, 
@@ -133,7 +133,7 @@ result;
 In comparison to the previous output with parameter `columns = "*"` this time
 only the selected columns were returned.
 
-## <a name="#info"></a>Additional information
+## Additional information
 
 ### Packages loaded via namespace
 The following packages are used in the `miRBaseVersions.db` package: 
