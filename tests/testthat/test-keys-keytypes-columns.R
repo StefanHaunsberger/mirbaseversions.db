@@ -15,9 +15,9 @@ test_that("Function: keytypes", {
         "MIMAT", "VW-MIMAT-10.0", "VW-MIMAT-10.1", "VW-MIMAT-11.0",
         "VW-MIMAT-12.0", "VW-MIMAT-13.0", "VW-MIMAT-14.0", "VW-MIMAT-15.0",
         "VW-MIMAT-16.0", "VW-MIMAT-17.0", "VW-MIMAT-18.0", "VW-MIMAT-19.0",
-        "VW-MIMAT-20.0", "VW-MIMAT-21.0", "VW-MIMAT-6.0", "VW-MIMAT-7.1",
-        "VW-MIMAT-8.0", "VW-MIMAT-8.1",  "VW-MIMAT-8.2", "VW-MIMAT-9.0",
-        "VW-MIMAT-9.1", "VW-MIMAT-9.2"
+        "VW-MIMAT-20.0", "VW-MIMAT-21.0", "VW-MIMAT-22.0", "VW-MIMAT-6.0",
+        "VW-MIMAT-7.1", "VW-MIMAT-8.0", "VW-MIMAT-8.1",  "VW-MIMAT-8.2",
+        "VW-MIMAT-9.0", "VW-MIMAT-9.1", "VW-MIMAT-9.2"
     );
 
     expect_equal(keytypes(miRBaseVersions.db), target);
