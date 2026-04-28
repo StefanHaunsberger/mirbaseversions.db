@@ -34,8 +34,8 @@ accessible repository for several different miRBase release versions.
   
 ## 1. Introduction
 
-The _miRBaseVersions.db_ package is an annotation package which includes 
-mature miRNA names from 21 miRBase release versions. Due to ongoing growth and 
+The _miRBaseVersions.db_ package is an annotation package which includes
+mature miRNA names from 22 miRBase release versions. Due to ongoing growth and 
 changes with each release miRNA names can have different names in different 
 versions or even are not listed as valid miRNAs anymore. This annotation package
 serves as a repository and can be used for quick lookup for mature miRNA names. 
@@ -96,8 +96,9 @@ are available:
 |19.0            |        25141    |08/12        |
 |20.0            |        30424    |06/13        |
 |21.0            |        35828    |06/14        |
+|22.0            |        48885    |03/18        |
 
-from 228 organisms.
+from 277 organisms.
 
 
 ## 2. Use Cases
@@ -112,8 +113,8 @@ The output lists `r length(keytypes(miRBaseVersions.db))` tables where each one
 of them can be queried. The keytype "MIMAT" is the main table containing all
 records from all supported miRBase release versions. Keytypes starting with 
 the prefix "VW-MIMAT" are so called SQL views. For example the keytype
-"VW-MIMAT-21.0" is an SQL view from the "MIMAT" table which only holds records
-from miRBase version 21.0.
+"VW-MIMAT-22.0" is an SQL view from the "MIMAT" table which only holds records
+from miRBase version 22.0.
 
 ### 2.2 Function `columns`
 

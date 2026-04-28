@@ -9,7 +9,7 @@
 \alias{select}
 \alias{miRBaseVersions.db-package}
 \alias{.onLoad}
-\title{miRBaseVersions.db: miRNA name collection of 21 different miRBase
+\title{miRBaseVersions.db: miRNA name collection of 22 different miRBase
 release versions.}
 \usage{
 columns(x)
@@ -53,9 +53,9 @@ mature miRNA names from selected versions.
 }
 \details{
 This annotation package comprises mature miRNA names from
-21 different miRBase versions. It contains one main table holding all miRNAs
-and one view for each version, such as 'vw-mimat-21.0' for mature miRNA names
-from version 21.0.
+22 different miRBase versions. It contains one main table holding all miRNAs
+and one view for each version, such as 'vw-mimat-22.0' for mature miRNA names
+from version 22.0.
 }
 \examples{
 # see all available tables
