@@ -1,13 +1,13 @@
 # miRBaseVersions.db
 
 A Bioconductor-style annotation R package shipping mature miRNA names from
-**22 miRBase release versions** (6.0 through 22.0). Exposed through the
+**23 miRBase release versions** (6.0 through 22.1). Exposed through the
 standard `AnnotationDbi` `select` interface so it plugs in alongside any
 other annotation package.
 
 Use it to translate or reconcile mature miRNA accessions and names across
 miRBase versions — e.g. mapping a legacy `MIMAT` accession to its current
-v22.0 name, or pulling the full per-version naming history of a miRNA.
+v22.1 name, or pulling the full per-version naming history of a miRNA.
 
 ## Installation
 
@@ -74,8 +74,16 @@ keytype is a per-release SQL view that filters down to one version.
 | 20.0 | 30,424 | 06/13 |
 | 21.0 | 35,828 | 06/14 |
 | 22.0 | 48,885 | 03/18 |
+| 22.1 | 48,885 | 10/18 |
 
 277 organisms in total.
+
+**Note on v22.1.** miRBase 22.1 only updated the high-confidence subset
+(which this package does not model); sequences, accessions and names are
+unchanged from v22.0. The `VW-MIMAT-22.1` keytype is therefore a
+relabelled alias view over `VW-MIMAT-22.0` rather than a separately
+ingested release. Querying it yields the same rows as v22.0 with
+`VERSION = 22.1`.
 
 ## Repository layout
 

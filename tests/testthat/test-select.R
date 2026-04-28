@@ -18,8 +18,12 @@ test_that("select with keytype='MIMAT' returns one row per miRBase version", {
     expect_s3_class(res, "data.frame");
     expect_equal(colnames(res),
                  c("ACCESSION", "NAME", "SEQUENCE", "VERSION", "ORGANISM"));
-    ## one row per release the accession appears in
-    expect_equal(nrow(res), length(keytypes(miRBaseVersions.db)) - 1L);
+    ## one row per release the accession appears in. The MIMAT keytype
+    ## queries the base `mimat` table directly, so it does not include
+    ## v22.1 — that release is exposed only as an alias view over v22.0.
+    n_view_releases = sum(grepl("^VW-MIMAT-",
+                                keytypes(miRBaseVersions.db)));
+    expect_equal(nrow(res), n_view_releases - 1L);
     expect_true(all(res$ACCESSION == "MIMAT0000092"));
     expect_true(all(res$ORGANISM == "hsa"));
     ## newest release renamed to hsa-miR-92a-3p; oldest is hsa-miR-92
@@ -67,6 +71,25 @@ test_that("select with version-specific view keytype returns one row", {
     expect_equal(res$NAME, "hsa-miR-92a-3p");
     expect_equal(res$VERSION, 22.0);
     expect_equal(res$ORGANISM, "hsa");
+
+});
+
+test_that("select on VW-MIMAT-22.1 mirrors VW-MIMAT-22.0 with relabelled version", {
+
+    ## v22.1 is an alias of v22.0. A query through the alias view should
+    ## return identical accession/name/sequence/organism as v22.0 with the
+    ## VERSION column relabelled to 22.1.
+    r22  = select(miRBaseVersions.db, keys = "MIMAT0000092",
+                  keytype = "VW-MIMAT-22.0", columns = "*");
+    r221 = select(miRBaseVersions.db, keys = "MIMAT0000092",
+                  keytype = "VW-MIMAT-22.1", columns = "*");
+
+    expect_equal(nrow(r221), 1L);
+    expect_equal(r221$VERSION, 22.1);
+    expect_equal(r221$ACCESSION, r22$ACCESSION);
+    expect_equal(r221$NAME,      r22$NAME);
+    expect_equal(r221$SEQUENCE,  r22$SEQUENCE);
+    expect_equal(r221$ORGANISM,  r22$ORGANISM);
 
 });
 

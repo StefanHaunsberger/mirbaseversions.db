@@ -7,13 +7,16 @@ mirbaseversionsORGANISM = "Multiple"
 
 #' @docType package
 #' @name miRBaseVersions.db
-#' @title miRBaseVersions.db: miRNA name collection of 22 different miRBase
+#' @title miRBaseVersions.db: miRNA name collection of 23 different miRBase
 #' release versions.
 #' @aliases columns keys keytypes select
 #' @details This annotation package comprises mature miRNA names from
-#' 22 different miRBase versions. It contains one main table holding all miRNAs
-#' and one view for each version, such as 'vw-mimat-22.0' for mature miRNA names
-#' from version 22.0.
+#' 23 different miRBase versions (releases 6.0 through 22.1). It contains one
+#' main table holding all miRNAs and one view for each version, such as
+#' 'vw-mimat-22.0' for mature miRNA names from version 22.0. miRBase 22.1 only
+#' updated the high-confidence subset (which this package does not model);
+#' sequences, accessions and names are unchanged from v22.0, so 'vw-mimat-22.1'
+#' is provided as a relabelled alias view over 'vw-mimat-22.0'.
 #' @import AnnotationDbi methods DBI RSQLite gtools
 #' @author Stefan Haunsberger \email{stefanhaunsberger@rcsi.ie}
 #'

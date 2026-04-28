@@ -75,8 +75,13 @@ test_that("each VW-MIMAT-* view filters mimat to a single version", {
 
 test_that("sum of view row counts equals total mimat row count", {
 
+    ## v22.1 is an alias of v22.0 (miRBase 22.1 only updated the
+    ## high-confidence subset, which this package does not model) and
+    ## therefore double-counts those rows when summed across views.
+    ## Exclude it from the row-conservation check.
     views = grep("^vw-mimat-[0-9]+\\.[0-9]$",
                  DBI::dbListTables(con), value = TRUE);
+    views = setdiff(views, "vw-mimat-22.1");
 
     perView = vapply(views,
                      function(v) DBI::dbGetQuery(con,
@@ -88,13 +93,35 @@ test_that("sum of view row counts equals total mimat row count", {
 
 })
 
-test_that("version table covers exactly the versions present in mimat", {
+test_that("vw-mimat-22.1 is a row-for-row alias of vw-mimat-22.0", {
+
+    ## miRBase 22.1 only changed the high-confidence subset; sequences,
+    ## accessions and names are unchanged from 22.0. The v22.1 view is
+    ## defined as a relabelled select over v22.0 rows.
+    n22  = DBI::dbGetQuery(con, "SELECT count(*) AS n FROM `vw-mimat-22.0`")$n;
+    n221 = DBI::dbGetQuery(con, "SELECT count(*) AS n FROM `vw-mimat-22.1`")$n;
+    expect_equal(n221, n22);
+
+    diff_count = DBI::dbGetQuery(con, paste(
+        "SELECT count(*) AS n FROM (",
+        "  SELECT accession, name, sequence, organism FROM `vw-mimat-22.0`",
+        "  EXCEPT",
+        "  SELECT accession, name, sequence, organism FROM `vw-mimat-22.1`",
+        ")"))$n;
+    expect_equal(diff_count, 0L);
+
+})
+
+test_that("version table covers exactly the versions present in mimat (plus alias releases)", {
 
     vTbl = sort(DBI::dbGetQuery(con, "SELECT number FROM version")$number);
     vMimat = sort(unique(
         DBI::dbGetQuery(con, "SELECT DISTINCT version AS v FROM mimat")$v));
 
-    expect_equal(vTbl, vMimat);
+    ## v22.1 is registered in `version` but exists only as an alias view over
+    ## v22.0 (no rows in `mimat`). All other entries must align.
+    expect_equal(setdiff(vTbl, vMimat), 22.1);
+    expect_equal(setdiff(vMimat, vTbl), numeric(0));
 
 })
 
