@@ -24,6 +24,18 @@ test_that("Function: keytypes", {
 
 })
 
+test_that("keytypes contains MIMAT plus one VW-MIMAT-* entry per release", {
+
+    kt = keytypes(miRBaseVersions.db);
+    views = grep("^VW-MIMAT-", kt, value = TRUE);
+
+    expect_true("MIMAT" %in% kt);
+    ## one base table + N version views, no duplicates
+    expect_equal(length(kt), length(views) + 1L);
+    expect_equal(length(unique(kt)), length(kt));
+
+})
+
 test_that("Function: columns", {
 
     target = c(
@@ -34,6 +46,13 @@ test_that("Function: columns", {
                 "VERSION"
                 );
     expect_equal(columns(miRBaseVersions.db), target);
+
+})
+
+test_that("columns are uppercase", {
+
+    cols = columns(miRBaseVersions.db);
+    expect_equal(cols, toupper(cols));
 
 })
 
@@ -57,5 +76,38 @@ test_that("Function: keys - 500 to 505 keytype='MIMAT'", {
 
 })
 
+test_that("keys returns a non-empty character vector for every keytype", {
 
+    for (kt in keytypes(miRBaseVersions.db)) {
+        k = keys(miRBaseVersions.db, kt);
+        expect_type(k, "character");
+        expect_true(length(k) > 0L,
+                    info = sprintf("keytype %s returned no keys", kt));
+    }
 
+})
+
+test_that("keys size grows monotonically across miRBase releases", {
+
+    versions = c("6.0", "7.1", "8.0", "8.1", "8.2",
+                 "9.0", "9.1", "9.2", "10.0", "10.1",
+                 "11.0", "12.0", "13.0", "14.0", "15.0",
+                 "16.0", "17.0", "18.0", "19.0", "20.0",
+                 "21.0", "22.0");
+    sizes = vapply(versions,
+                   function(v) length(keys(miRBaseVersions.db,
+                                           paste0("VW-MIMAT-", v))),
+                   integer(1));
+    ## strictly non-decreasing — accessions only accumulate across releases
+    expect_true(all(diff(sizes) >= 0));
+    ## v22.0 should be the largest
+    expect_equal(unname(which.max(sizes)), length(versions));
+
+})
+
+test_that("keys for unknown keytype errors", {
+
+    expect_error(keys(miRBaseVersions.db, "VW-MIMAT-99.0"),
+                 "does not exist");
+
+})
