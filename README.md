@@ -15,9 +15,7 @@ v22.1 name, or pulling the full per-version naming history of a miRNA.
 # install.packages("BiocManager")
 BiocManager::install("AnnotationDbi")          # required dependency
 
-# from a local checkout
-devtools::install()
-# or
+# install miRBaseVersions.db from source
 # R CMD INSTALL miRBaseVersions.db
 ```
 
@@ -30,7 +28,7 @@ library(miRBaseVersions.db)
 
 # What can I query?
 keytypes(miRBaseVersions.db)
-#>  [1] "MIMAT"        "VW-MIMAT-22.0" "VW-MIMAT-21.0" ... "VW-MIMAT-6.0"
+#>  [1] "MIMAT"        "VW-MIMAT-22.1" "VW-MIMAT-22.0" ... "VW-MIMAT-6.0"
 
 columns(miRBaseVersions.db)
 #> [1] "ACCESSION" "NAME" "ORGANISM" "SEQUENCE" "VERSION"
@@ -42,7 +40,7 @@ select(miRBaseVersions.db,
        columns = c("ACCESSION", "NAME", "VERSION"))
 
 # Just the names present in the current release
-keys(miRBaseVersions.db, keytype = "VW-MIMAT-22.0")[1:5]
+keys(miRBaseVersions.db, keytype = "VW-MIMAT-22.1")[1:5]
 ```
 
 The `MIMAT` keytype searches across every version. Each `VW-MIMAT-<X.Y>`
@@ -85,29 +83,12 @@ relabelled alias view over `VW-MIMAT-22.0` rather than a separately
 ingested release. Querying it yields the same rows as v22.0 with
 `VERSION = 22.1`.
 
-## Repository layout
+## Documentation
 
-- [`R/zzz.R`](R/zzz.R) — runtime package code. The `MiRBaseVersionsDb`
-  class and all `setMethod` definitions live inside `.onLoad`.
-- [`inst/extdata/miRBaseVersions.sqlite`](inst/extdata/) — shipped database
-  asset (base tables `mi`, `mimat`, `mi2mimat`, `version`, `organism`, plus
-  one `vw-mimat-<X.Y>` view per release).
-- [`man/`](man/) — auto-generated `.Rd` files. Edit roxygen comments in
-  `R/zzz.R`, then run `devtools::document()` — never edit `.Rd` by hand.
-- [`vignettes/miRBaseVersions.db-vignette.Rmd`](vignettes/miRBaseVersions.db-vignette.Rmd)
-  — narrative documentation with worked examples.
-- [`tests/testthat/`](tests/testthat/) — unit tests.
-- [`data-raw/`](data-raw/) — gitignored database build pipeline (used to
-  regenerate `inst/extdata/miRBaseVersions.sqlite` when a new miRBase
-  release is added). See [CLAUDE.md](CLAUDE.md) for the regeneration flow.
-
-## Development
+A worked-examples vignette is included with the package:
 
 ```r
-devtools::document()    # regenerate man/ from roxygen
-devtools::install()     # install locally
-devtools::test()        # run testthat suite
-devtools::check()       # full R CMD check
+vignette("miRBaseVersions.db-vignette")
 ```
 
 ## License
