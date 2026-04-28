@@ -38,6 +38,7 @@ insertMI(df = mbf$mi, db = db);
 insertMIMAT(df = mbf$mimat, db = db);
 insertMI2MIMAT(df = mbf$mi2mimat, db = db);
 
+source("data-raw/sqlite/creating-views.R");
 
 # Close connection to db
 dbDisconnect(db)
