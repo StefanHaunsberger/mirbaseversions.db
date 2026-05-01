@@ -21,11 +21,14 @@ dbListFields(db, "version");
 
 # Read versions
 df.version = dbReadTable(db, "version");
-# Submit create-table-query
-invisible(sapply(df.version$number, function (version) {
+# v22.1 is handled separately as an alias of v22.0 (see below); skip it in the
+# per-version loop so the alias definition is not shadowed by an empty view.
+versions.standard = df.version$number[df.version$number != 22.1];
+# Submit create-view-query (idempotent — safe to re-run against an existing DB)
+invisible(sapply(versions.standard, function (version) {
 					dbSendQuery(conn = db,
 							sprintf(
-"CREATE VIEW [vw-mimat-%2.1f] AS
+"CREATE VIEW IF NOT EXISTS [vw-mimat-%2.1f] AS
 	SELECT *
 	FROM mimat
 	WHERE version == %2.1f;", version, version));
@@ -35,7 +38,7 @@ invisible(sapply(df.version$number, function (version) {
 ## high-confidence subset (which this package does not model); sequences,
 ## accessions and names are unchanged from v22.0.
 dbSendQuery(conn = db,
-"CREATE VIEW [vw-mimat-22.1] AS
+"CREATE VIEW IF NOT EXISTS [vw-mimat-22.1] AS
 	SELECT accession, name, sequence, 22.1 AS version, organism
 	FROM mimat
 	WHERE version == 22.0;");
@@ -69,7 +72,7 @@ dbSendQuery(conn = db,
 
 ## Create unique miRNA view
 dbSendQuery(conn = db,
-"CREATE VIEW [vw-mimat-mirna-unique] AS
+"CREATE VIEW IF NOT EXISTS [vw-mimat-mirna-unique] AS
 	SELECT DISTINCT name
    FROM mimat;");
 
@@ -81,13 +84,22 @@ dbSendQuery(conn = db,
 
 ## Create view of miRNAs that swapped MIMAT among versions
 dbSendQuery(conn = db,
-"CREATE VIEW [vw-mimat-mirna-swapped-mimat] AS
+"CREATE VIEW IF NOT EXISTS [vw-mimat-mirna-swapped-mimat] AS
 	SELECT name FROM (
 		SELECT name, count(*) as frequency FROM (
 			SELECT DISTINCT accession, name FROM mimat
 		)
 	GROUP BY name)
 	WHERE frequency > 1;");
+
+####################################################
+
+## Write/refresh the `current_version` metadata row consumed by the companion
+## package miRNAmeConverter via AnnotationDbi::dbmeta(con, "current_version").
+## The metadata table itself is created by AnnotationDbi::loadDb; this row is
+## custom and must be set explicitly here.
+dbExecute(conn = db,
+"INSERT OR REPLACE INTO metadata (name, value) VALUES ('current_version', '22.1');");
 
 
 				

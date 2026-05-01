@@ -1,7 +1,7 @@
 Package: miRBaseVersions.db
 Type: Package
 Title: Collection of mature miRNA names of 23 different miRBase release versions
-Version: 1.2.0
+Version: 1.3.0
 Authors@R: person("Stefan", "Haunsberger", email = "stefan.haunsberger@gmail.com", role = c("aut", "cre"))
 Description: Annotation package containing all available miRNA names from 23 versions (data from http://www.mirbase.org/). Releases 6.0 through 22.1; v22.1 is exposed as an alias of v22.0 because miRBase 22.1 only updated the high-confidence subset (which this package does not model).
 License: Artistic-2.0

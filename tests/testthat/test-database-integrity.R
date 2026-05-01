@@ -141,3 +141,31 @@ test_that("organism codes used in mimat overlap the organism dictionary", {
                 info = "less than half of mimat organism codes are in the organism dictionary");
 
 })
+
+test_that("helper views consumed by miRNAmeConverter exist", {
+
+    ## miRNAmeConverter queries these views directly (not via select()), so a
+    ## rebuild that drops them silently breaks checkMiRNAName() and
+    ## assessMiRNASwappingMIMAT() in the consumer package.
+    views = DBI::dbListTables(con);
+    for (v in c("vw-mimat-mirna-unique", "vw-mimat-mirna-swapped-mimat")) {
+        expect_true(v %in% views,
+                    info = sprintf("missing helper view %s", v));
+    }
+
+    n_unique = DBI::dbGetQuery(con,
+        "SELECT count(*) AS n FROM `vw-mimat-mirna-unique`")$n;
+    expect_true(n_unique > 0);
+
+})
+
+test_that("current_version metadata is 22.1", {
+
+    ## The consumer reads this via AnnotationDbi::dbmeta(con, 'current_version')
+    ## and uses it as the default translation target. v22.1 is the latest
+    ## exposed (alias) release.
+    cv = DBI::dbGetQuery(con,
+        "SELECT value FROM metadata WHERE name = 'current_version'")$value;
+    expect_equal(cv, "22.1");
+
+})
