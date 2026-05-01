@@ -3,3 +3,6 @@
 .RData
 
 data-raw/
+
+CLAUDE.md
+.claude/
